@@ -161,9 +161,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/izat.conf:system/etc/izat.conf \
     $(LOCAL_PATH)/gps/etc/lowi.conf:system/etc/lowi.conf \
     $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
-    $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf \
+    $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf 
 
 # HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.manager@1.0-java
+
+# Manifest
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
 
