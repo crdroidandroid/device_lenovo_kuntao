@@ -1,25 +1,25 @@
-# Unified Device configuration for Lenovo Vibe P1 & P1 Turbo
+# Device configuration for Lenovo P2
 
 ## Spec Sheet
 
 | Feature                 | Specification                                 |
 | :---------------------- | :---------------------------------------------|
-| CPU                     | Quad-core 1.5/1.6 GHz & quad-core 1.1/1.2 GHz |
-| Chipset                 | Qualcomm MSM8939 Snapdragon 615/616           |
-| GPU                     | Adreno 405                            	  |
-| Memory                  | 2/3GB RAM                             	  |
-| Shipped Android Version | (5.1)                                 	  |
+| CPU                     | Octa-core 2.0 GHz Cortex-A53                  |
+| Chipset                 | Qualcomm MSM8953 Snapdragon 625               |
+| GPU                     | Adreno 506                            	  |
+| Memory                  | 3/4GB RAM                             	  |
+| Shipped Android Version | Android 6.0.1 (Marshmallow)                   |
 | Storage                 | 32 GB                                 	  |
 | MicroSD                 | Up to 256GB                           	  |
-| Battery                 | 5000/4900 mAh                              	  |
-| Dimensions              | 152.9 x 75.6 x 9.9 mm                         |
+| Battery                 | 5100 mAh                              	  |
+| Dimensions              | 153 x 76 x 8.3 mm                             |
 | Display                 | 1080 x 1920 pixels                            |
 | Camera                  | 13 MP                                         |
-| Release Date            | October 2015 / February 2016                  |
+| Release Date            | November, 2016                                |
 
 ## Device Picture 
 
-![Lenovo Vibe P1 Turbo](https://i.ytimg.com/vi/hQ_tGlpsmXk/maxresdefault.jpg "Lenovo Vibe P1 Turbo")
+![Lenovo P2](http://cdn2.gsmarena.com/vv/pics/lenovo/lenovo-p2-1.jpg "Lenovo P2")
 
 ## Copyright
 
