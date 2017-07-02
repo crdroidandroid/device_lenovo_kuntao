@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit device configuration
-$(call inherit-product, device/lenovo/p1a42/full_p1a42.mk)
+$(call inherit-product, device/lenovo/p2/full_p2.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
@@ -23,8 +23,8 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := p1a42
-PRODUCT_NAME := lineage_p1a42
+PRODUCT_DEVICE := p2
+PRODUCT_NAME := lineage_p2
 PRODUCT_BRAND := Lenovo
 PRODUCT_MANUFACTURER := Lenovo
-PRODUCT_RELEASE_NAME := p1a42
+PRODUCT_RELEASE_NAME := p2
