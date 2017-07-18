@@ -17,10 +17,10 @@
 #
 
 set -e
-export DEVICE=p1a42
+export DEVICE=p2
 export VENDOR=lenovo
 
-INITIAL_COPYRIGHT_YEAR=2016
+INITIAL_COPYRIGHT_YEAR=2017
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -54,6 +54,6 @@ fi
 # Initialize the helper
     setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" true
     extract "$MY_DIR"/proprietary-files.txt "$SRC"
-    INITIAL_COPYRIGHT_YEAR=2016
+    INITIAL_COPYRIGHT_YEAR=2017
 
 "$MY_DIR"/setup-makefiles.sh

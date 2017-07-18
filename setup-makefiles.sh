@@ -17,7 +17,7 @@
 
 set -e
 
-INITIAL_COPYRIGHT_YEAR=2016
+INITIAL_COPYRIGHT_YEAR=2017
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -36,11 +36,11 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" "true"
 
 # Copyright headers and guards
-write_headers "p1a42"
+write_headers "p2"
 
 # The standard device blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
-    INITIAL_COPYRIGHT_YEAR=2016
+    INITIAL_COPYRIGHT_YEAR=2017
 
 # We are done!
 write_footers
