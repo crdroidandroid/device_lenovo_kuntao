@@ -101,15 +101,8 @@ PRODUCT_PACKAGES += \
     Gello
 
 # Init scripts
-PRODUCT_PACKAGES += \
-    init.qcom.sh \
-    init.qcom.bt.sh
-
-PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.qcom.usb.rc \
-    init.qcom.rc \
-    ueventd.qcom.rc
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,${LOCAL_PATH}/rootdir/etc,root)
 
 # Keylayout
 PRODUCT_COPY_FILES += \
