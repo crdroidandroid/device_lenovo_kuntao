@@ -368,6 +368,8 @@ vendor/lib/libOpenCL.so
 vendor/lib64/libscale.so
 -framework/com.qti.snapdragon.sdk.display.jar|e6387246d96376fd832fdcf14b65e149b6333bb2
 vendor/lib64/libsd_sdk_display.so
+vendor/lib64/hw/vulkan.msm8953.so
+vendor/lib/hw/vulkan.msm8953.so
 
 # Graphics firmware
 etc/firmware/a300_pm4.fw
