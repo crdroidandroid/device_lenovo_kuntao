@@ -40,48 +40,36 @@
 #include "log.h"
 #include "util.h"
 
-int is3GB()
+int is4GB()
 {
     struct sysinfo sys;
     sysinfo(&sys);
-    return sys.totalram > 2048ull * 1024 * 1024;
-}
-
-static void init_alarm_boot_properties()
-{
-    int boot_reason;
-    FILE *fp;
-
-    fp = fopen("/proc/sys/kernel/boot_reason", "r");
-    fscanf(fp, "%d", &boot_reason);
-    fclose(fp);
-
-    /*
-     * Setup ro.alarm_boot value to true when it is RTC triggered boot up
-     * For existing PMIC chips, the following mapping applies
-     * for the value of boot_reason:
-     *
-     * 0 -> unknown
-     * 1 -> hard reset
-     * 2 -> sudden momentary power loss (SMPL)
-     * 3 -> real time clock (RTC)
-     * 4 -> DC charger inserted
-     * 5 -> USB charger inserted
-     * 6 -> PON1 pin toggled (for secondary PMICs)
-     * 7 -> CBLPWR_N pin toggled (for external power supply)
-     * 8 -> KPDPWR_N pin toggled (power key pressed)
-     */
-     if (boot_reason == 3) {
-        property_set("ro.alarm_boot", "true");
-     } else {
-        property_set("ro.alarm_boot", "false");
-     }
+    return sys.totalram > 3072ull * 1024 * 1024;
 }
 
 void vendor_load_properties()
 {
-    if (is3GB()) {
-        property_set("ro.product.model", "Vibe P1 Turbo");
+    if (is4GB()) {
+      // dalvik stuff
+        property_set("dalvik.vm.heapstartsize", "8m");
+        property_set("dalvik.vm.heapgrowthlimit", "384m");
+        property_set("dalvik.vm.heapsize", "1024m");
+        property_set("dalvik.vm.heaptargetutilization", "0.75");
+        property_set("dalvik.vm.heapminfree", "4m");
+        property_set("dalvik.vm.heapmaxfree", "16m");
+     // hwui stuff
+        property_set("ro.hwui.texture_cache_size", "72");
+        property_set("ro.hwui.layer_cache_size", "48");
+        property_set("ro.hwui.r_buffer_cache_size", "8");
+        property_set("ro.hwui.path_cache_size", "32");
+        property_set("ro.hwui.gradient_cache_size", "1");
+        property_set("ro.hwui.drop_shadow_cache_size", "6");
+        property_set("ro.hwui.texture_cache_flushrate", "0.4");
+        property_set("ro.hwui.text_small_cache_width", "1024");
+        property_set("ro.hwui.text_small_cache_height", "1024");
+        property_set("ro.hwui.text_large_cache_width", "2048");
+        property_set("ro.hwui.text_large_cache_height", "1024");
+    } else {
     // dalvik stuff
         property_set("dalvik.vm.heapstartsize", "8m");
         property_set("dalvik.vm.heapgrowthlimit", "288m");
@@ -101,31 +89,9 @@ void vendor_load_properties()
         property_set("ro.hwui.text_small_cache_height", "1024");
         property_set("ro.hwui.text_large_cache_width", "2048");
         property_set("ro.hwui.text_large_cache_height", "1024");
-    } else {
-        property_set("ro.product.model", "Vibe P1");
-      // dalvik stuff
-        property_set("dalvik.vm.heapstartsize", "16m");
-        property_set("dalvik.vm.heapgrowthlimit", "192m");
-        property_set("dalvik.vm.heapsize", "512m");
-        property_set("dalvik.vm.heaptargetutilization", "0.75");
-        property_set("dalvik.vm.heapminfree", "2m");
-        property_set("dalvik.vm.heapmaxfree", "8m");
-     // hwui stuff
-        property_set("ro.hwui.texture_cache_size", "72");
-        property_set("ro.hwui.layer_cache_size", "48");
-        property_set("ro.hwui.r_buffer_cache_size", "8");
-        property_set("ro.hwui.path_cache_size", "32");
-        property_set("ro.hwui.gradient_cache_size", "1");
-        property_set("ro.hwui.drop_shadow_cache_size", "6");
-        property_set("ro.hwui.texture_cache_flushrate", "0.4");
-        property_set("ro.hwui.text_small_cache_width", "1024");
-        property_set("ro.hwui.text_small_cache_height", "1024");
-        property_set("ro.hwui.text_large_cache_width", "2048");
-        property_set("ro.hwui.text_large_cache_height", "1024");
-    }
-    property_set("ro.build.product", "p1a42");
-    property_set("ro.product.device", "p1a42");
-    property_set("ro.build.description", "passion_row-user 6.0.1 MMB29M P1a42_S288_160721_ROW release-keys");
-    property_set("ro.build.fingerprint", "Lenovo/passion_row/P1a42:6.0.1/MMB29M/P1a42_S288_160721_ROW:user/release-keys");
-	init_alarm_boot_properties();
+    } 
+    property_set("ro.build.product", "p2");
+    property_set("ro.product.device", "p2");
+    property_set("ro.build.description", "kuntao_row-user 7.0 NRD90N P2a42_S233_170404_ROW release-keys");
+    property_set("ro.build.fingerprint", "Lenovo/kuntao_row/P2a42:7.0/NRD90N/P2a42_S233_170404_ROW:user/release-keys");
 }
