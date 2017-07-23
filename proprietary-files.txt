@@ -267,6 +267,7 @@ vendor/lib64/libmm-disp-apis.so
 vendor/lib/libmm-disp-apis.so
 vendor/lib64/libmm-qdcm.so
 vendor/lib/libmm-qdcm.so
+-vendor/app/colorservice/colorservice.apk|a3a69854fd9e95e55c69a571abfbb1ddb2ef6ce4
 
 # DRM
 bin/qseecomd
