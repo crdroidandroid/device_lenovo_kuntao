@@ -15,7 +15,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),p1a42)
+ifeq ($(TARGET_DEVICE),p2)
 LOCAL_SRC_FILES += libbt-vendor.so:system/lib/libbt-vendor.so
 LOCAL_SRC_FILES += libbt-vendor.so:obj/SHARED_LIBRARIES/libbt-vendor_intermediates/LINKED/libbt-vendor.so
 LOCAL_SRC_FILES += libbt-vendor.so:symbols/system/lib/libbt-vendor.so
