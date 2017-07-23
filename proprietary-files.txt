@@ -55,6 +55,8 @@ etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 bin/btnvtool
 bin/hci_qcomm_init
 vendor/lib64/libbtnv.so
+etc/firmware/hbtp/hbtpcfg.dat
+etc/firmware/hbtp/qtc800s_dsp.bin
 
 # Camera
 vendor/lib/libfastcvopt.so
@@ -293,6 +295,18 @@ bin/smart_charger
 lib64/hw/fingerprint.default.so
 lib64/libvcsfp.so
 lib/libvcsfp.so
+etc/firmware/synaptics-s3508-16060806-kuntao.tdat
+etc/firmware/synaptics-s3508-16062306-kuntao.tdat
+etc/firmware/synaptics-s3508-16071507-kuntao.tdat
+etc/firmware/synaptics-s3508-16080201-kuntao.tdat
+etc/firmware/synaptics-s3508-16081202-kuntao.tdat
+etc/firmware/synaptics-s3508-16082202-kuntao.tdat
+etc/firmware/synaptics-s3508sga-16060806-kuntao.tdat
+etc/firmware/synaptics-s3508sga-16062306-kuntao.tdat
+etc/firmware/synaptics-s3508sga-16071507-kuntao.tdat
+etc/firmware/synaptics-s3508sga-16080201-kuntao.tdat
+etc/firmware/synaptics-s3508sga-16081202-kuntao.tdat
+etc/firmware/synaptics-s3508sga-16082202-kuntao.tdat
 
 # GPS
 lib64/hw/gps.default.so
@@ -377,17 +391,29 @@ vendor/lib64/hw/vulkan.msm8953.so
 vendor/lib/hw/vulkan.msm8953.so
 
 # Graphics firmware
-etc/firmware/a300_pm4.fw
-etc/firmware/a300_pfp.fw
-etc/firmware/a330_pfp.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a420_pfp.fw
-etc/firmware/leia_pfp_470.fw
-etc/firmware/a330_pm4.fw
-etc/firmware/a225_pm4.fw
-etc/firmware/leia_pm4_470.fw
 etc/firmware/a225p5_pm4.fw
+etc/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw
+etc/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw
+etc/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw
+etc/firmware/a420_pfp.fw
 etc/firmware/a420_pm4.fw
+etc/firmware/a506_zap.b00
+etc/firmware/a506_zap.b01
+etc/firmware/a506_zap.b02
+etc/firmware/a506_zap.elf
+etc/firmware/a506_zap.mdt
+etc/firmware/a530_gpmu.fw2
+etc/firmware/a530_pfp.fw
+etc/firmware/a530_pm4.fw
+etc/firmware/a530v1_pfp.fw
+etc/firmware/a530v1_pm4.fw
+etc/firmware/a530v2_seq.fw2
+etc/firmware/a530v3_gpmu.fw2
+etc/firmware/a530v3_seq.fw2
+etc/firmware/a540_gpmu.fw2
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 
 # Lights
@@ -482,6 +508,21 @@ vendor/lib64/hw/keystore.msm8953.so
 etc/cdrom_install.iso
 vendor/lib/libqmi_client_qmux.so
 vendor/lib64/libqmi_client_qmux.so
+etc/firmware/ice40.bin
+etc/firmware/leia_pfp_470.fw
+etc/firmware/leia_pm4_470.fw
+etc/firmware/nvm_tlv_1.3.bin
+etc/firmware/nvm_tlv_2.1.bin
+etc/firmware/nvm_tlv_3.0.bin
+etc/firmware/nvm_tlv_3.2.bin
+etc/firmware/nvm_tlv.bin
+etc/firmware/rampatch_tlv_1.3.tlv
+etc/firmware/rampatch_tlv_2.1.tlv
+etc/firmware/rampatch_tlv_3.0.tlv
+etc/firmware/rampatch_tlv_3.2.tlv
+etc/firmware/rampatch_tlv.img
+etc/firmware/tas2555_uCDSP.bin
+etc/firmware/emmc_ffu_15_RX14MB.fw
 
 # Radio
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|0c344aef2c4fd505517703edd2024c69fecc0229
@@ -546,4 +587,4 @@ etc/hostapd/hostapd_default.conf
 etc/hostapd/hostapd.deny
 etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant_overlay.conf
-#etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
