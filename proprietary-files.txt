@@ -588,4 +588,3 @@ etc/hostapd/hostapd_default.conf
 etc/hostapd/hostapd.deny
 etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant_overlay.conf
-etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
