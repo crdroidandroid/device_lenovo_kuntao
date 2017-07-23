@@ -271,7 +271,7 @@ vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
 vendor/lib/libwvdrm_L3.so
 vendor/lib/libWVStreamControlAPI_L3.so
--framework/com.google.widevine.software.drm.jar2aa8d838c1e5573327c003aac09e49014d8eb0a1
+-framework/com.google.widevine.software.drm.jar|2aa8d838c1e5573327c003aac09e49014d8eb0a1
 -framework/com.google.android.media.effects.jar|999bc3e20113979a06e6246a4df959b05fa646f0
 
 # Fastcharger
@@ -470,7 +470,7 @@ vendor/lib/libqmi_client_qmux.so
 vendor/lib64/libqmi_client_qmux.so
 
 # Radio
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|44208b26946119f4aaa3784a75c8a962526a550bb
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|0c344aef2c4fd505517703edd2024c69fecc0229
 bin/netmgrd
 bin/radish
 bin/rild
@@ -501,10 +501,14 @@ etc/data/netmgr_config.xml
 etc/data/dsi_config.xml
 
 # Sensorhub
-#vendor/lib64/libcalmodule_gyroscope.so
-#vendor/lib/libcalmodule_gyroscope.so
-#vendor/lib64/libcalmodule_akm.so
+vendor/lib/sensors.alsps.so
+vendor/lib64/sensors.alsps.so
+vendor/lib/sensors.st.so
+vendor/lib64/sensors.st.so
+vendor/lib/sensors.ssc.so
+vendor/lib64/sensors.ssc.so
 lib64/hw/sensors.msm8953.so
+lib/hw/sensors.msm8953.so
 
 # Thermal
 vendor/bin/thermal-engine
