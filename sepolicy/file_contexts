@@ -2,7 +2,7 @@
 /dev/i2c_smartpa(/.*)?     		 	        			u:object_r:audio_device:s0
 
 # Binaries
-/system/bin/fast_charger_sw 							u:object_r:fast_charger_sw_exec:s0
+/system/bin/smart_charger 							u:object_r:smart_charger_exec:s0
 /system/bin/vfmService								u:object_r:vfmService_exec:s0
 
 # OneKey & IDK why fastcharger needs
@@ -18,9 +18,6 @@
 # Partitions
 /dev/block/bootdevice/by-name/cache                    				u:object_r:cache_block_device:s0
 /dev/block/bootdevice/by-name/modem						u:object_r:firmware_file:s0
-
-# tfa9890
-/dev/i2c-4									u:object_r:audio_device:s0
 
 # NFC
 /dev/bcm2079x									u:object_r:nfc_device:s0

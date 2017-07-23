@@ -1,0 +1,11 @@
+# Fast charger
+type smart_charger, domain;
+type smart_charger_exec, exec_type, file_type;
+
+init_daemon_domain(smart_charger)
+
+allow smart_charger sysfs_smart_charger:file { read open };
+allow smart_charger sysfs_smart_charger:file rw_file_perms;
+allow smart_charger sysfs_smart_charger:file setattr;
+allow smart_charger sysfs_smart_charger:dir search;
+allow smart_charger sysfs:file { read open };
