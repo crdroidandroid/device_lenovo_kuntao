@@ -19,6 +19,8 @@ audio.offload.min.duration.secs=30
 audio.offload.video=true
 use.voice.path.for.pcm.voip=true
 audio.offload.gapless.enabled=true
+audio.offload.pcm.16bit.enable=true
+audio.offload.pcm.24bit.enable=true
 
 # Bluetooh
 bluetooth.hfp.client=1
@@ -36,14 +38,26 @@ ro.qualcomm.bluetooth.opp=true
 ro.qualcomm.bluetooth.pbap=true
 
 # Camera
-camera2.portability.force_api=1
-persist.camera.cpp.duplication=false
-persist.camera.hal.debug.mask=0
-persist.camera.pip.support=0
+camera.display.umax=1920x1080
+camera.display.lmax=1280x720
+camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+vidc.dec.downscalar_width=1920
+vidc.dec.downscalar_height=1088
+vidc.dec.disable.split.cpu=1
+vidc.enc.dcvs.extra-buff-count=2
+vidc.enc.disable_bframes=1
+vidc.enc.disable_pframes=1
 
 # Display
-ro.opengles.version=196608
-persist.hwc.mdpcomp.enable=1
+debug.egl.hw=1
+debug.enable.sglscale=1
+debug.gralloc.enable_fb_ubwc=1
+debug.mdpcomp.logs=0
+debug.sf.hw=1
+dev.pm.dyn_samplingrate=1
+persist.demo.hdmirotationlock=false
+persist.hwc.mdpcomp.enable=true
+ro.opengles.version=196610
 
 # DRM
 drm.service.enabled=1
@@ -64,7 +78,7 @@ media.stagefright.enable-aac=true
 media.stagefright.enable-qcp=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
-media.msm8939hw=0
+media.msm8956hw=0
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
@@ -112,5 +126,4 @@ persist.data.netmgrd.qos.enable=true
 ro.sf.lcd_density=480
 
 # WiFi
-ro.disableWifiApFirmwareReload=true
 wifi.interface=wlan0
