@@ -154,8 +154,13 @@ vendor/lib/libsecureui.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libwqe.so
 vendor/lib/libquipc_os_api.so
+etc/camera/lenovo_kuntao_camera.xml
 
 # Chromatix
+etc/camera/imx258_kuntaoof_chromatix.xml
+etc/camera/imx258_kuntaosy_chromatix.xml
+etc/camera/ov5695_kuntaoof_chromatix.xml
+etc/camera/ov5695_kuntaosy_chromatix.xml
 vendor/lib/libchromatix_imx258_kuntaoof_default_video.so
 vendor/lib/libchromatix_imx258_kuntaosy_postproc.so
 vendor/lib/libchromatix_ov5695_kuntaoof_cpp_liveshot.so
