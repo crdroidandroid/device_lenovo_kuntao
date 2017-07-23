@@ -385,6 +385,10 @@ etc/firmware/a225p5_pm4.fw
 etc/firmware/a420_pm4.fw
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 
+# Lights
+lib64/hw/lights.msm8953.so
+lib/hw/lights.msm8953.so
+
 # Media
 lib/libqomx_core.so
 vendor/lib/libOmxAacDec.so
@@ -467,6 +471,9 @@ lib/libvalAuth.so
 -app/shutdownlistener/shutdownlistener.apk|447962c7a0424915a391e6ac7abf1fc262c144a0
 vendor/lib64/libdisp-aba.so
 vendor/lib64/hw/gatekeeper.msm8953.so
+vendor/lib/hw/gatekeeper.msm8953.so
+vendor/lib/hw/keystore.msm8953.so
+vendor/lib64/hw/keystore.msm8953.so
 etc/cdrom_install.iso
 vendor/lib/libqmi_client_qmux.so
 vendor/lib64/libqmi_client_qmux.so

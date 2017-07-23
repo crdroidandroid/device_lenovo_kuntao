@@ -108,14 +108,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
-# Keystore
-PRODUCT_PACKAGES += \
-    keystore.msm8953
-
-# Lights
-PRODUCT_PACKAGES += \
-    lights.msm8953
-
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
