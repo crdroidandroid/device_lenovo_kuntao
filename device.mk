@@ -158,7 +158,7 @@ PRODUCT_PACKAGES += \
 
 # Sensor
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf
+    $(LOCAL_PATH)/configs/hals.conf:system/etc/sensors/hals.conf
 
 # Wifi
 PRODUCT_PACKAGES += \
