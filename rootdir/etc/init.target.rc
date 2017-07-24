@@ -225,13 +225,6 @@ service hbtp /system/vendor/bin/hbtp_daemon
     group system
     disabled
 
-#lenovo-sw weiweij added for smart_charger fast charger switch dameon
-service smart_charger /system/bin/smart_charger
-    class  main
-    user root
-    seclabel u:r:smart_charger:s0
-#lenovo-sw weiweij added for smart_charger fast charger switch dameon end
-
 #lenovo-sw wengjun,2016-2-26,add touch boot script begin
 service mmi-touch-sh /system/bin/init.mmi.touch.sh
     class core

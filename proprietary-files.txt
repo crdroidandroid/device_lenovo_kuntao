@@ -66,6 +66,9 @@ bin/mm-qcamera-daemon
 lib/libmmjpeg_interface.so
 lib/libmm-qcamera.so
 lib/libmmcamera_interface.so
+vendor/lib/libts_detected_face_hal.so
+vendor/lib/libts_face_beautify_hal.so
+vendor/lib/libmotocalibration.so
 vendor/lib/libmmcamera_isp_color_correct40.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera_optizoom_lib.so
@@ -495,6 +498,8 @@ bin/tftp_server
 bin/lowi-server
 bin/garden_app
 bin/loc_launcher
+lib/libloc_pla.so
+lib64/libloc_pla.so
 lib/libunwind.so
 lib/libloc_eng.so
 lib/libloc_api_v02.so
