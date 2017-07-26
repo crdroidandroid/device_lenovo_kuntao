@@ -343,6 +343,7 @@ vendor/lib/libmm-disp-apis.so
 vendor/lib64/libmm-qdcm.so
 vendor/lib/libmm-qdcm.so
 -vendor/app/colorservice/colorservice.apk|a3a69854fd9e95e55c69a571abfbb1ddb2ef6ce4
+etc/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml
 
 # DRM
 bin/qseecomd

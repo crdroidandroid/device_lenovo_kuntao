@@ -62,6 +62,7 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
+    libaudio-resampler \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -83,9 +84,23 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     memtrack.msm8953
 
+# Display Calibration
+PRODUCT_PACKAGES += \
+    libjni_livedisplay
+
+# DRM
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-lite
+
 # Doze
 PRODUCT_PACKAGES += \
     DeviceSettings
+
+# Ebtables
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes \
+    libebtc
 
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
@@ -109,6 +124,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
 # Media
+PRODUCT_PACKAGES += \
+    libc2dcolorconvert
+
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
