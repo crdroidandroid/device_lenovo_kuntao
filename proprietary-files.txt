@@ -760,6 +760,10 @@ vendor/lib/libsensor_reg.so
 vendor/lib64/libsensor_reg.so
 vendor/lib/libmag_akm.so
 vendor/lib64/libmag_akm.so
+vendor/lib/libDRPlugin.so
+vendor/lib64/libDRPlugin.so
+vendor/lib/libdrplugin_client.so
+vendor/lib64/libdrplugin_client.so
 
 # Thermal
 vendor/bin/thermal-engine
