@@ -84,6 +84,7 @@ lib/libmm-qcamera.so
 lib/libmmcamera_interface.so
 lib/libarcsoft_beautyshot.so
 lib/libmpbase.so
+vendor/lib/libcamera_bm_algo.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libchromaflash.so
 vendor/lib/libts_detected_face_hal.so
@@ -423,7 +424,6 @@ vendor/lib64/liblowi_wifihal_nl.so
 etc/permissions/com.qualcomm.location.xml
 vendor/lib64/liblocationservice_glue.so
 etc/permissions/com.qti.location.sdk.xml
--priv-app/com.qualcomm.location/com.qualcomm.location.apk|cad8ec736b34da6a27f040b2e18d08c3e2e8bff1
 -framework/com.qti.location.sdk.jar|9bdf26890c36d3aaf740f831bc7e46a4bcec52b6
 vendor/lib64/liblocationservice.so
 vendor/lib/libscale.so
@@ -615,6 +615,8 @@ bin/garden_app
 bin/loc_launcher
 lib/libloc_pla.so
 lib64/libloc_pla.so
+lib/libloc_stub.so
+lib64/libloc_stub.so
 lib/libunwind.so
 lib/libloc_eng.so
 lib/libloc_api_v02.so
@@ -651,6 +653,7 @@ etc/firmware/emmc_ffu_15_RX14MB.fw
 bin/netmgrd
 bin/pm-proxy
 bin/qmi_motext_hook
+lib64/libtzssm.so
 bin/radish
 bin/rild
 bin/rmt_storage
@@ -755,6 +758,8 @@ vendor/lib/libsensor1.so
 vendor/lib64/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib64/libsensor_reg.so
+vendor/lib/libmag_akm.so
+vendor/lib64/libmag_akm.so
 
 # Thermal
 vendor/bin/thermal-engine
