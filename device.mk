@@ -119,6 +119,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,${LOCAL_PATH}/rootdir/etc,root)
 
+# IPA Manager
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
