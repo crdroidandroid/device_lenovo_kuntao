@@ -18,6 +18,7 @@ vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libscveTextReco_skel.so
 
 # Audio
+bin/msm_irqbalance
 lib/hw/audio.primary.msm8953.so
 vendor/lib/hw/sound_trigger.primary.msm8953.so
 vendor/lib/soundfx/libqcbassboost.so
@@ -41,9 +42,12 @@ vendor/lib64/libhwdaphal.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libFlacSwDec.so
-bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 vendor/etc/audio_effects.conf
+etc/drc/drc_cfg_5.1.txt
+etc/drc/drc_cfg_AZ.txt
+etc/surround_sound_3mic/surround_sound_rec_5.1.cfg
+etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 etc/mixer_paths_mtp.xml
 etc/audio_policy.conf
 etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
