@@ -115,6 +115,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Gello
 
+# GPS
+PRODUCT_PACKAGES += \
+    libgnsspps \
+    gps.msm8953
+
 # Init scripts
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,${LOCAL_PATH}/rootdir/etc,root)
