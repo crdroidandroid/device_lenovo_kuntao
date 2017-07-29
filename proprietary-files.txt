@@ -21,6 +21,8 @@ vendor/lib/rfsa/adsp/libscveTextReco_skel.so
 bin/msm_irqbalance
 lib/hw/audio.primary.msm8953.so
 vendor/lib/hw/sound_trigger.primary.msm8953.so
+vendor/lib/libadpcmdec.so
+vendor/lib/libsmwrapper.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
@@ -80,6 +82,18 @@ vendor/lib64/libbtnv.so
 etc/firmware/hbtp/hbtpcfg.dat
 etc/firmware/hbtp/qtc800s_dsp.bin
 
+# Bluetooth firmware
+etc/firmware/nvm_tlv_1.3.bin
+etc/firmware/nvm_tlv_2.1.bin
+etc/firmware/nvm_tlv_3.0.bin
+etc/firmware/nvm_tlv_3.2.bin
+etc/firmware/nvm_tlv.bin
+etc/firmware/rampatch_tlv_1.3.tlv
+etc/firmware/rampatch_tlv_2.1.tlv
+etc/firmware/rampatch_tlv_3.0.tlv
+etc/firmware/rampatch_tlv_3.2.tlv
+etc/firmware/rampatch_tlv.img
+
 # Camera
 vendor/lib/libfastcvopt.so
 vendor/lib/libmmipl.so
@@ -91,6 +105,7 @@ lib/libmmcamera_interface.so
 lib/libarcsoft_beautyshot.so
 lib/libmpbase.so
 lib/libivc_smartengine.so
+lib/libqomx_core.so
 vendor/lib/libcamera_bm_algo.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libchromaflash.so
@@ -178,7 +193,6 @@ vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libactuator_dw9767_kuntaoof.so
 vendor/lib/libactuator_dw9767_kuntaosy.so
 vendor/lib/libmmjpeg.so
-vendor/lib/libdataitems.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
@@ -188,15 +202,14 @@ vendor/lib/libmmsw_opencl.so
 vendor/lib/libmmsw_platform.so
 vendor/lib/liboptizoom.so
 vendor/lib/libqomx_jpegdec.so
+vendor/lib/libqomx_jpegenc.so
 vendor/lib/libseemore.so
 vendor/lib/libtrueportrait.so
 vendor/lib/libubifocus.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libwqe.so
-vendor/lib/libquipc_os_api.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libmmcamera_dbg.so
-vendor/lib64/libdataitems.so
 vendor/lib64/libmmsw_detail_enhancement.so
 vendor/lib64/libmmsw_math.so
 vendor/lib64/libmmsw_opencl.so
@@ -355,8 +368,8 @@ etc/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml
 
 # DRM
 bin/qseecomd
+vendor/bin/qseeproxydaemon
 vendor/lib/libcppf.so
-vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libGPreqcancel.so
@@ -364,6 +377,15 @@ vendor/lib/libGPreqcancel_svc.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
 vendor/lib/libQSEEComAPI.so
+vendor/lib/libsecureui_svcsock.so
+vendor/lib/libsecureuisvc_jni.so
+vendor/lib/libsecureui.so
+vendor/lib/lib-sec-disp.so
+vendor/lib/libGPTEE.so
+vendor/lib/libSecureUILib.so
+vendor/lib/libStDrvInt.so
+vendor/lib/libqisl.so
+vendor/lib/libtzdrmgenprov.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libGPreqcancel.so
@@ -371,9 +393,15 @@ vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
 vendor/lib64/libQSEEComAPI.so
-vendor/lib/libwvdrm_L3.so
-vendor/lib/libWVStreamControlAPI_L3.so
-vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib64/libsecureui_svcsock.so
+vendor/lib64/libsecureuisvc_jni.so
+vendor/lib64/libsecureui.so
+vendor/lib64/lib-sec-disp.so
+vendor/lib64/libGPTEE.so
+vendor/lib64/libSecureUILib.so
+vendor/lib64/libStDrvInt.so
+vendor/lib64/libqisl.so
+vendor/lib64/libtzdrmgenprov.so
 -framework/com.google.widevine.software.drm.jar|2aa8d838c1e5573327c003aac09e49014d8eb0a1
 -framework/com.google.android.media.effects.jar|999bc3e20113979a06e6246a4df959b05fa646f0
 
@@ -404,11 +432,17 @@ etc/firmware/synaptics-s3508sga-16080201-kuntao.tdat
 etc/firmware/synaptics-s3508sga-16081202-kuntao.tdat
 etc/firmware/synaptics-s3508sga-16082202-kuntao.tdat
 
+# Gatekeeper
+vendor/lib/hw/gatekeeper.msm8953.so
+vendor/lib64/hw/gatekeeper.msm8953.so
+
 # GPS
 bin/loc_launcher
 bin/xtwifi-client
 bin/xtwifi-inet-agent
 bin/gpsone_daemon
+bin/garden_app
+bin/lowi-server
 etc/cacert_location.pem
 etc/flp.conf
 etc/gps.conf
@@ -458,10 +492,10 @@ vendor/lib/libloc_externalDr.so
 vendor/lib/liblocationservice.so
 vendor/lib/liblocationservice_glue.so
 vendor/lib/liblowi_client.so
-vendor/lib/libquipc_os_api.so
 vendor/lib/libulp2.so
 vendor/lib/libxt_native.so
 vendor/lib/libxtadapter.so
+vendor/lib/libslimclient.so
 vendor/lib64/hw/flp.default.so
 vendor/lib64/libalarmservice_jni.so
 vendor/lib64/libasn1cper.so
@@ -482,10 +516,10 @@ vendor/lib64/libloc_externalDr.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblowi_client.so
-vendor/lib64/libquipc_os_api.so
 vendor/lib64/libulp2.so
 vendor/lib64/libxt_native.so
 vendor/lib64/libxtadapter.so
+vendor/lib64/libslimclient.so
 
 # Graphics
 vendor/lib/hw/vulkan.msm8953.so
@@ -501,7 +535,9 @@ vendor/lib/libbccQTI.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
 vendor/lib/libRSDriver_adreno.so
+vendor/lib/libc2d30-a3xx.so
 vendor/lib/libc2d30-a4xx.so
+vendor/lib/libc2d30-a5xx.so
 vendor/lib/libc2d30_bltlib.so
 vendor/lib/libC2D2.so
 vendor/lib/libCB.so
@@ -531,7 +567,9 @@ vendor/lib64/libbccQTI.so
 vendor/lib64/librs_adreno.so
 vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libRSDriver_adreno.so
+vendor/lib64/libc2d30-a3xx.so
 vendor/lib64/libc2d30-a4xx.so
+vendor/lib64/libc2d30-a5xx.so
 vendor/lib64/libc2d30_bltlib.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libCB.so
@@ -550,6 +588,9 @@ vendor/lib64/libsdmextension.so
 vendor/lib64/libsd_sdk_display.so
 -framework/com.qti.snapdragon.sdk.display.jar|e6387246d96376fd832fdcf14b65e149b6333bb2
 etc/permissions/com.qti.snapdragon.sdk.display.xml
+vendor/bin/mm-pp-dpps
+vendor/lib/libdisp-aba.so
+vendor/lib64/libdisp-aba.so
 
 # Graphics firmware
 etc/firmware/a225p5_pm4.fw
@@ -579,25 +620,61 @@ etc/firmware/a540_gpmu.fw2
 # IPA
 bin/ipacm-diag
 
+# keymaster
+vendor/lib/hw/keystore.msm8953.so
+vendor/lib64/hw/keystore.msm8953.so
+
 # Lights
 lib64/hw/lights.msm8953.so
 lib/hw/lights.msm8953.so
 
 # Media
-lib/libqomx_core.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libqomx_jpegenc.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxEvrcDec.so
+lib/libOmxVpp.so
+lib/libstagefright_soft_flacdec.so
+lib/libvpplibrary.so
+lib64/libstagefright_soft_flacdec.so
+lib64/libvpplibrary.so
+vendor/lib/libAlacSwDec.so
+vendor/lib/libApeSwDec.so
+vendor/lib/libFlacSwDec.so
 vendor/lib/libI420colorconvert.so
-vendor/lib/libmmosal.so
+vendor/lib/libOmxAacDec.so
+vendor/lib/libOmxAlacDec.so
+vendor/lib/libOmxAlacDecSw.so
+vendor/lib/libOmxAmrwbplusDec.so
+vendor/lib/libOmxApeDec.so
+vendor/lib/libOmxApeDecSw.so
+vendor/lib/libOmxEvrcDec.so
+vendor/lib/libOmxMux.so
+vendor/lib/libOmxQcelp13Dec.so
+vendor/lib/libOmxWmaDec.so
 vendor/lib/libmm-color-convertor.so
-vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxEvrcDec.so
+vendor/lib/libmmosal.so
+vendor/lib/libmmsw_detail_enhancement.so
+vendor/lib/libmmsw_math.so
+vendor/lib/libmmsw_opencl.so
+vendor/lib/libmmsw_platform.so
+vendor/lib/libvqzip.so
+vendor/lib64/libAlacSwDec.so
+vendor/lib64/libApeSwDec.so
+vendor/lib64/libFlacSwDec.so
 vendor/lib64/libI420colorconvert.so
-vendor/lib64/libmmosal.so
+vendor/lib64/libOmxAacDec.so
+vendor/lib64/libOmxAlacDec.so
+vendor/lib64/libOmxAlacDecSw.so
+vendor/lib64/libOmxAmrwbplusDec.so
+vendor/lib64/libOmxApeDec.so
+vendor/lib64/libOmxApeDecSw.so
+vendor/lib64/libOmxEvrcDec.so
+vendor/lib64/libOmxMux.so
+vendor/lib64/libOmxQcelp13Dec.so
+vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libmm-color-convertor.so
+vendor/lib64/libmmosal.so
+vendor/lib64/libmmsw_detail_enhancement.so
+vendor/lib64/libmmsw_math.so
+vendor/lib64/libmmsw_opencl.so
+vendor/lib64/libmmsw_platform.so
 
 # Network
 -priv-app/QtiTetherService/QtiTetherService.apk|f9c1c323db1e3ed12d38923597f50edcb8a6e1ea
@@ -622,80 +699,58 @@ bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
-# Qualcomm framework
+# QMI
 bin/irsc_util
-bin/tftp_server
-bin/lowi-server
-bin/garden_app
-lib/libvalAuth.so
-vendor/lib/hw/gatekeeper.msm8953.so
-vendor/lib/hw/keystore.msm8953.so
+etc/permissions/qti_permissions.xml
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libqcci_legacy.so
+vendor/lib/libqcmaputils.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
-vendor/lib/libqisl.so
 vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_helper.so
+vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
+vendor/lib/libqti-wl.so
+vendor/lib/libquipc_os_api.so
 vendor/lib/libsmemlog.so
-vendor/lib/libsecureui.so
-vendor/lib/libdisp-aba.so
-vendor/lib/libulp2.so
-vendor/lib/libxtadapter.so
-vendor/lib/libqmi_client_qmux.so
-lib64/libvalAuth.so
-vendor/lib64/hw/gatekeeper.msm8953.so
-vendor/lib64/hw/keystore.msm8953.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
 vendor/lib64/libqcci_legacy.so
+vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
-vendor/lib64/libqisl.so
 vendor/lib64/libqmi.so
 vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_client_helper.so
+vendor/lib64/libqmi_client_qmux.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
+vendor/lib64/libqti-wl.so
+vendor/lib64/libquipc_os_api.so
 vendor/lib64/libsmemlog.so
-vendor/lib64/libsecureui.so
-vendor/lib64/libdisp-aba.so
-vendor/lib64/libulp2.so
-vendor/lib64/libxtadapter.so
-vendor/lib64/libqmi_client_qmux.so
-etc/cdrom_install.iso
-etc/firmware/ice40.bin
 etc/firmware/leia_pfp_470.fw
 etc/firmware/leia_pm4_470.fw
-etc/firmware/nvm_tlv_1.3.bin
-etc/firmware/nvm_tlv_2.1.bin
-etc/firmware/nvm_tlv_3.0.bin
-etc/firmware/nvm_tlv_3.2.bin
-etc/firmware/nvm_tlv.bin
-etc/firmware/rampatch_tlv_1.3.tlv
-etc/firmware/rampatch_tlv_2.1.tlv
-etc/firmware/rampatch_tlv_3.0.tlv
-etc/firmware/rampatch_tlv_3.2.tlv
-etc/firmware/rampatch_tlv.img
 etc/firmware/tas2555_uCDSP.bin
 etc/firmware/emmc_ffu_15_RX14MB.fw
--app/shutdownlistener/shutdownlistener.apk|447962c7a0424915a391e6ac7abf1fc262c144a0
 
 # Radio
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|0c344aef2c4fd505517703edd2024c69fecc0229
 -app/datastatusnotification/datastatusnotification.apk|1e06cba273b9bb05514e25da50085fafd969de1c
+-app/shutdownlistener/shutdownlistener.apk|447962c7a0424915a391e6ac7abf1fc262c144a0
+-app/fastdormancy/fastdormancy.apk|5175c7dbad2084449fac8496df44fab82e309bc4
+bin/port-bridge
 bin/netmgrd
 bin/pm-proxy
 bin/qmi_motext_hook
@@ -706,11 +761,17 @@ bin/rmt_storage
 bin/tftp_server
 etc/permissions/qcrilhook.xml
 etc/data/netmgr_config.xml
+etc/permissions/embms.xml
+etc/permissions/telephonyservice.xml
 etc/data/dsi_config.xml
+-framework/QtiTelephonyServicelibrary.jar|2f19f3fa264d09fafac41bd7c5aa11034100e074
+-framework/embmslibrary.jar|a06799495515305de3e5d432ec62a1f692200c99
+-framework/qti-telephony-common.jar|6a1b5bc07936bb54c9d00b24aa6879ce5e69f2a5
 -framework/qcrilhook.jar|a98216ff420d2f55241fd50dcfae325908ba8860
 vendor/qcril.db
 lib/libmotext_inf.so
 lib/libril.so
+vendor/bin/qti
 vendor/lib/libconfigdb.so
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
@@ -794,7 +855,9 @@ vendor/lib64/libscveTextRecoPostProcessing.so
 vendor/lib64/libscveTextReco_stub.so
 
 # Sensorhub
+bin/sensors.qcom
 lib/hw/sensors.msm8953.so
+vendor/lib/hw/activity_recognition.msm8953.so
 vendor/lib/sensors.alsps.so
 vendor/lib/sensors.st.so
 vendor/lib/sensors.ssc.so
@@ -805,7 +868,9 @@ vendor/lib/libDRPlugin.so
 vendor/lib/libdrplugin_client.so
 vendor/lib/libevent_observer.so
 vendor/lib/lib_acgdaemon.so
+vendor/lib/sensor_calibrate.so
 lib64/hw/sensors.msm8953.so
+vendor/lib64/hw/activity_recognition.msm8953.so
 vendor/lib64/sensors.alsps.so
 vendor/lib64/sensors.st.so
 vendor/lib64/sensors.ssc.so
@@ -816,6 +881,7 @@ vendor/lib64/libDRPlugin.so
 vendor/lib64/libdrplugin_client.so
 vendor/lib64/libevent_observer.so
 vendor/lib64/lib_acgdaemon.so
+vendor/lib64/sensor_calibrate.so
 
 # Thermal
 vendor/bin/thermal-engine
@@ -841,6 +907,14 @@ vendor/lib64/libqti-iop.so
 vendor/lib64/libqti-iop-client.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti_performance.so
+
+# USB
+etc/firmware/ice40.bin
+
+# Widevine
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libwvdrm_L3.so
+vendor/lib/libWVStreamControlAPI_L3.so
 
 # WiFi
 vendor/lib/libxtwifi_ulp_adaptor.so
