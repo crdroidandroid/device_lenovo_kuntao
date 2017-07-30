@@ -59,10 +59,6 @@ on fs
     # use /persist as phony PDS partition
     symlink /persist /pds
 
-    # Mount modem FSG partition
-    wait /dev/block/bootdevice/by-name/fsg
-    mount ext4 /dev/block/bootdevice/by-name/fsg /fsg ro nosuid nodev barrier=0 context=u:object_r:fsg_file:s0
-
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
     mkdir /persist/camera 0755 mot_tcmd mot_tcmd
