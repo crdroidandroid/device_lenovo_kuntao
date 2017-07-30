@@ -617,6 +617,25 @@ etc/firmware/a530v3_gpmu.fw2
 etc/firmware/a530v3_seq.fw2
 etc/firmware/a540_gpmu.fw2
 
+# Inits
+etc/hcidump.sh
+etc/init.crda.sh
+etc/init.qcom.bt.sh
+etc/init.qcom.fm.sh
+etc/init.qti.ims.sh
+etc/init.ath3k.bt.sh
+etc/init.qcom.coex.sh
+etc/init.qcom.sdio.sh
+etc/init.qcom.uicc.sh
+etc/init.qcom.wifi.sh
+etc/hsic.control.bt.sh
+etc/init.qcom.audio.sh
+etc/init.qcom.debug.sh
+etc/qca6234-service.sh
+etc/init.qcom.efs.sync.sh
+etc/init.lenovo.persist.sh
+etc/init.qcom.post_boot.sh
+
 # IPA
 bin/ipacm-diag
 
