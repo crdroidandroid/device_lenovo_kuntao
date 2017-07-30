@@ -92,10 +92,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite
 
-# Doze
-PRODUCT_PACKAGES += \
-    DeviceSettings
-
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
