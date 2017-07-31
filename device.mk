@@ -175,6 +175,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
+# QMI
+PRODUCT_PACKAGES += \
+    libjson
+
 # RIL
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
@@ -189,7 +193,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libqsap_sdk \
     libQWiFiSoftApCfg \
-    libwcnss_qmi \
     wcnss_service
 
 PRODUCT_PACKAGES += \

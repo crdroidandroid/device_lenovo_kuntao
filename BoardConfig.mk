@@ -65,6 +65,9 @@ BACKLIGHT_PATH := "/sys/class/leds/button-backlight/brightness"
 # CMHW
 BOARD_HARDWARE_CLASS := device/lenovo/p2/cmhw/src
 
+# CNE | DPM
+BOARD_USES_QCNE := true
+
 # FM
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 BOARD_HAVE_QCOM_FM := true
@@ -88,7 +91,7 @@ BOARD_USES_ADRENO := true
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_p2
 TARGET_RECOVERY_DEVICE_MODULES := libinit_p2
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
@@ -106,7 +109,6 @@ TARGET_KERNEL_CONFIG := p2a42_defconfig
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
-TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -124,26 +126,18 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4294967296
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 25631374336
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 
+# Power
+TARGET_POWERHAL_VARIANT := qcom
+
 # Properties
 TARGET_SYSTEM_PROP += device/lenovo/p2/system.prop
 
 # Qualcomm support
-BOARD_USES_QC_TIME_SERVICES := true
-TARGET_POWERHAL_VARIANT := qcom
-TARGET_RIL_VARIANT := caf
-#TARGET_TAP_TO_WAKE_NODE := "/sys/class/tp_gesture/tp_device/tp_gesture_id"
-ifneq ($(QCPATH),)
-BOARD_USES_QCNE := true
-TARGET_LDPRELOAD := libNimsWrap.so
-endif
 BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QC_TIME_SERVICES := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/lenovo/p2/rootdir/etc/fstab.qcom
-BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-BOARD_HAS_NO_MISC_PARTITION := true
-BOARD_SUPPRESS_EMMC_WIPE := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/lenovo/p2/sepolicy
@@ -152,7 +146,6 @@ include device/qcom/sepolicy/sepolicy.mk
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
-TARGET_USES_QCOM_WCNSS_QMI := true
 BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
 BOARD_WLAN_DEVICE := qcwcn
