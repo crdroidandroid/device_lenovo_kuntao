@@ -635,6 +635,7 @@ etc/qca6234-service.sh
 etc/init.qcom.efs.sync.sh
 etc/init.lenovo.persist.sh
 etc/init.qcom.post_boot.sh
+etc/vhw.xml
 
 # IPA
 bin/ipacm-diag
