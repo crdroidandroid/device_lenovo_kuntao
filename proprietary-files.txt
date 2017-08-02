@@ -405,6 +405,12 @@ vendor/lib64/libtzdrmgenprov.so
 -framework/com.google.widevine.software.drm.jar|2aa8d838c1e5573327c003aac09e49014d8eb0a1
 -framework/com.google.android.media.effects.jar|999bc3e20113979a06e6246a4df959b05fa646f0
 
+# EMMC
+bin/emmc_ffu
+bin/emmc_ffu.sh
+bin/emmc_ffu_15.sh
+etc/firmware/emmc_ffu_15_RX14MB.fw
+
 # Fastcharger
 bin/vfmAPITest
 bin/vfmService
@@ -636,6 +642,9 @@ etc/init.qcom.efs.sync.sh
 etc/init.lenovo.persist.sh
 etc/init.qcom.post_boot.sh
 etc/vhw.xml
+bin/mv_files.sh
+bin/qsee_log.sh
+bin/init.mmi.touch.sh
 
 # IPA
 bin/ipacm-diag
@@ -763,7 +772,7 @@ vendor/lib64/libsmemlog.so
 etc/firmware/leia_pfp_470.fw
 etc/firmware/leia_pm4_470.fw
 etc/firmware/tas2555_uCDSP.bin
-etc/firmware/emmc_ffu_15_RX14MB.fw
+
 
 # Radio
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|0c344aef2c4fd505517703edd2024c69fecc0229
