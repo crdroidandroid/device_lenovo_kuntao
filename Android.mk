@@ -141,7 +141,7 @@ ALL_DEFAULT_INSTALLED_MODULES += $(MDTP_SYMLINKS)
 MODEM_IMAGES := \
     modem.b00 modem.b01 modem.b02 modem.b04 modem.b05 modem.b06 modem.b07 \
     modem.b08 modem.b09 modem.b10 modem.b11 modem.b12 modem.b13 modem.b16 \
-    modem.b17 modem.b18 modem.b19 modem.b20 modem.mdt modem_pr
+    modem.b17 modem.b18 modem.b19 modem.b20 modem.mdt
 
 MODEM_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(MODEM_IMAGES)))
 $(MODEM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
