@@ -17,6 +17,9 @@ vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libscveTextReco_skel.so
 
+# ATFWD
+bin/ATFWD-daemon
+
 # Audio
 bin/msm_irqbalance
 lib/hw/audio.primary.msm8953.so
@@ -77,6 +80,7 @@ etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 # Bluetooth
 bin/btnvtool
 bin/hci_qcomm_init
+vendor/bin/hbtp_daemon
 vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 etc/firmware/hbtp/hbtpcfg.dat
@@ -106,6 +110,10 @@ lib/libarcsoft_beautyshot.so
 lib/libmpbase.so
 lib/libivc_smartengine.so
 lib/libqomx_core.so
+lib/libarcsoft_hdr.so
+lib/libarcsoft_beautyshot.so
+lib/libarcsoft_night_shot.so
+lib/libarcsoft_panorama_burstcapture.so
 vendor/lib/libcamera_bm_algo.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libchromaflash.so
@@ -422,8 +430,11 @@ lib64/libvfmClient.so
 lib64/libvfmtztransport.so
 
 # Fingerprint
+bin/synaFpTestHalTest
 lib/libvcsfp.so
+lib/libsynaFpTestHal.so
 lib64/libvcsfp.so
+lib64/libsynaFpTestHal.so
 lib64/hw/fingerprint.default.so
 etc/firmware/synaptics-s3508-16060806-kuntao.tdat
 etc/firmware/synaptics-s3508-16062306-kuntao.tdat
@@ -705,6 +716,16 @@ vendor/lib64/libmmsw_math.so
 vendor/lib64/libmmsw_opencl.so
 vendor/lib64/libmmsw_platform.so
 
+# Mmi
+bin/mmi
+bin/mmi_agent32
+bin/mmi_agent64
+bin/mmi_debug
+bin/mmi_diag
+bin/motobox
+lib/libTAS2555ftc.so
+lib64/libTAS2555ftc.so
+
 # Network
 -priv-app/QtiTetherService/QtiTetherService.apk|f9c1c323db1e3ed12d38923597f50edcb8a6e1ea
 vendor/lib/libQtiTether.so
@@ -731,6 +752,7 @@ vendor/lib64/libperipheral_client.so
 # QMI
 bin/irsc_util
 etc/permissions/qti_permissions.xml
+lib/libQseeOptService.so
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
@@ -750,6 +772,7 @@ vendor/lib/libqmiservices.so
 vendor/lib/libqti-wl.so
 vendor/lib/libquipc_os_api.so
 vendor/lib/libsmemlog.so
+lib64/libQseeOptService.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
