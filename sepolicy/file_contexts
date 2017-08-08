@@ -7,17 +7,17 @@
 
 # OneKey & IDK why fastcharger needs
 /sys/devices/soc.0/gpio_keys.69(/.*)?						u:object_r:sysfs_smart_charger:s0
-/sys/devices/soc.0/78b8000.i2c/i2c-4/4-006b/power_supply/ext-charger(/.*)?	u:object_r:sysfs_smart_charger:s0
+/sys/devices/soc.0/78b8000.i2c/i2c-4/4-006b/power_supply/ext-charger/type	u:object_r:sysfs_smart_charger:s0
 
 # Camera
 /data/cam_socket[12]                                    			u:object_r:camera_socket:s0
 
 # Fingerprint
-/data/validity(/.*)?								u:object_r:fingerprintd_data_file:s0
+/dev/validity/CH_EVENT305							u:object_r:fingerprintd_data_file:s0
+/dev/validity/ValidityService.pid						u:object_r:fingerprintd_data_file:s0
 
 # Partitions
 /dev/block/bootdevice/by-name/cache                    				u:object_r:cache_block_device:s0
-/dev/block/bootdevice/by-name/modem						u:object_r:firmware_file:s0
 
 # NFC
 /dev/bcm2079x									u:object_r:nfc_device:s0
