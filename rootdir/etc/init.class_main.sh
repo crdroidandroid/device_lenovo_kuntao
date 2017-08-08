@@ -30,42 +30,19 @@
 # start ril-daemon only for targets on which radio is present
 #
 baseband=`getprop ro.baseband`
-sgltecsfb=`getprop persist.radio.sglte_csfb`
 datamode=`getprop persist.data.mode`
+netmgr=`getprop ro.use_data_netmgrd`
 
 case "$baseband" in
-    "apq")
-    setprop ro.radio.noril yes
-    stop ril-daemon
-esac
-
-case "$baseband" in
-    "msm" | "csfb" | "svlte2a" | "mdm" | "mdm2" | "sglte" | "sglte2" | "dsda2" | "unknown" | "dsda3")
+    "msm" | "unknown")
     start qmuxd
     start ipacm-diag
     start ipacm
-    case "$baseband" in
-        "svlte2a" | "csfb")
-          start qmiproxy
-        ;;
-        "sglte" | "sglte2" )
-          if [ "x$sgltecsfb" != "xtrue" ]; then
-              start qmiproxy
-          else
-              setprop persist.radio.voice.modem.index 0
-          fi
-        ;;
-        "dsda2")
-          setprop persist.radio.multisim.config dsda
-    esac
 
     multisim=`getprop persist.radio.multisim.config`
 
     if [ "$multisim" = "dsds" ] || [ "$multisim" = "dsda" ]; then
         start ril-daemon2
-    elif [ "$multisim" = "tsts" ]; then
-        start ril-daemon2
-        start ril-daemon3
     fi
 
     case "$datamode" in
@@ -75,23 +52,69 @@ case "$baseband" in
             ;;
         "concurrent")
             start qti
-            start netmgrd
-            start port-bridge
+            if [ "$netmgr" = "true" ]; then
+                start netmgrd
+            fi
             ;;
         *)
-            start netmgrd
+            if [ "$netmgr" = "true" ]; then
+                start netmgrd
+            fi
             ;;
     esac
 esac
 
+start_copying_prebuilt_qcril_db()
+{
+    if [ -f /system/vendor/qcril.db -a ! -f /data/misc/radio/qcril.db ]; then
+        cp /system/vendor/qcril.db /data/misc/radio/qcril.db
+        chown -h radio.radio /data/misc/radio/qcril.db
+    fi
+}
+
 #
-# Allow persistent faking of bms
-# User needs to set fake bms charge in persist.bms.fake_batt_capacity
+# Copy qcril.db if needed for RIL
 #
-fake_batt_capacity=`getprop persist.bms.fake_batt_capacity`
-case "$fake_batt_capacity" in
-    "") ;; #Do nothing here
-    * )
-    echo "$fake_batt_capacity" > /sys/class/power_supply/battery/capacity
-    ;;
-esac
+start_copying_prebuilt_qcril_db
+echo 1 > /data/misc/radio/db_check_done
+
+#
+# Make modem config folder and copy firmware config to that folder for RIL
+#
+if [ -f /data/misc/radio/ver_info.txt ]; then
+    prev_version_info=`cat /data/misc/radio/ver_info.txt`
+else
+    prev_version_info=""
+fi
+
+# modify by linzb2,2016-05-06 begin
+# cur_version_info=`cat /firmware/verinfo/ver_info.txt`
+cur_version_info=`getprop ro.product.sw.internal.version`
+# modify by linzb2,2016-05-06 end
+if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
+    rm -rf /data/misc/radio/modem_config
+    mkdir /data/misc/radio/modem_config
+    chmod 770 /data/misc/radio/modem_config
+# modify by linzb2,2016-05-06 begin
+# modify by xuwz1, 2016-11-23 begin 
+    # cp -r /firmware/image/modem_pr/mcfg/configs/* /data/misc/radio/modem_config
+    cp  /firmware/image/modem_pr/mcfg/configs/mbn_ota.txt /data/misc/radio/modem_config/mbn_ota.txt
+    #cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/africa/ntel/commerci/mcfg_sw.mbn /data/misc/radio/modem_config/ntel.mbn
+    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/apac/reliance/commerci/mcfg_sw.mbn /data/misc/radio/modem_config/rjil.mbn
+    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/eu/3uk/3uk/mcfg_sw.mbn /data/misc/radio/modem_config/3uk_gb.mbn
+    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/sea/smartfre/commerci/mcfg_sw.mbn /data/misc/radio/modem_config/smartfren.mbn
+    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/sea/ytl/gen_3gpp/mcfg_sw.mbn /data/misc/radio/modem_config/ytl.mbn
+    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/common/gcf/gen_3gpp/mcfg_sw.mbn /data/misc/radio/modem_config/gcf.mbn
+    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/row/default/gen_3gpp/mcfg_sw.mbn /data/misc/radio/modem_config/row.mbn
+# modify by xuwz1, 2016-11-23 end
+# modify by linzb2,2016-05-06 end
+    chown -hR radio.radio /data/misc/radio/modem_config
+    cp /firmware/verinfo/ver_info.txt /data/misc/radio/ver_info.txt
+    chown radio.radio /data/misc/radio/ver_info.txt
+# modify by linzb2,2016-05-06 begin
+    echo $cur_version_info > /data/misc/radio/ver_info.txt
+# modify by linzb2,2016-05-06 end
+fi
+cp /firmware/image/modem_pr/mbn_ota.txt /data/misc/radio/modem_config
+chown radio.radio /data/misc/radio/modem_config/mbn_ota.txt
+echo 1 > /data/misc/radio/copy_complete
