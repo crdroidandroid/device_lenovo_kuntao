@@ -113,11 +113,6 @@ on post-fs
     chown mot_tcmd root /sys/class/power_supply/ext-charger/usb_otg
     chmod 0664  /sys/class/power_supply/ext-charger/usb_otg
 
-service oem-hw-sh /init.oem.hw.sh
-    seclabel u:r:init_hw:s0
-    class core
-    user root
-    oneshot
     chown system system /dev/iio:device0
     chmod 0660 /dev/iio:device0
     chown system system /dev/iio:device1
