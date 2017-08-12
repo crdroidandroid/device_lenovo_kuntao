@@ -352,7 +352,7 @@ etc/permissions/com.quicinc.cne.xml
 -framework/ConnectivityExt.jar|67025d09bbc7bb87bca1d15ab9c133eeb1ef2b9d
 -framework/cneapiclient.jar|3cb56a579341acfb16d2be2e41bac2c7b6ac34b4
 -framework/com.quicinc.cne.jar|2be59f78be920f93e68d5d6bdccaf5ada190744e
--priv-app/CNEService/CNEService.apk|cc91e82caf58628c26782c9678ef41b93696be13
+-priv-app/CNEService/CNEService.apk |bec91431fa8628008c3f04c38e05991f393e5c73
 vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneqmiutils.so
@@ -371,7 +371,7 @@ vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-qdcm.so
 vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libmm-qdcm.so
--vendor/app/colorservice/colorservice.apk|a3a69854fd9e95e55c69a571abfbb1ddb2ef6ce4
+-vendor/app/colorservice/colorservice.apk|aa5db32920e608b67f5e4102b2dbb99a8005f502
 etc/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml
 
 # DRM
@@ -410,8 +410,8 @@ vendor/lib64/libSecureUILib.so
 vendor/lib64/libStDrvInt.so
 vendor/lib64/libqisl.so
 vendor/lib64/libtzdrmgenprov.so
--framework/com.google.widevine.software.drm.jar|2aa8d838c1e5573327c003aac09e49014d8eb0a1
--framework/com.google.android.media.effects.jar|999bc3e20113979a06e6246a4df959b05fa646f0
+-framework/com.google.widevine.software.drm.jar|2cf1eff3ec91ad1003941ef43bec0612e64e6a05
+-framework/com.google.android.media.effects.jar|eb1d8c19b3658b3583fce5e4e4c3825c5276556d
 
 # EMMC
 bin/emmc_ffu
@@ -472,8 +472,8 @@ etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.vzw_library.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
--framework/com.qti.location.sdk.jar|9bdf26890c36d3aaf740f831bc7e46a4bcec52b6
--framework/com.qualcomm.location.vzw_library.jar|d3b9d63a215e3b192103f3c7f2238ae17584e1b1
+-framework/com.qti.location.sdk.jar|97600139f3c9dd41eeed1da17fc03d4ec4ea035f
+-framework/com.qualcomm.location.vzw_library.jar|afab9bec6cf93bacac82f360dfc696922bbef0bc
 -framework/izat.xt.srv.jar|da31c6183f8d29251ce5656ddab6d4b386934382
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
@@ -727,7 +727,7 @@ lib/libTAS2555ftc.so
 lib64/libTAS2555ftc.so
 
 # Network
--priv-app/QtiTetherService/QtiTetherService.apk|f9c1c323db1e3ed12d38923597f50edcb8a6e1ea
+-priv-app/QtiTetherService/QtiTetherService.apk|87889aa72256f8d4a7e12ca6392be8aab5c92cb3
 vendor/lib/libQtiTether.so
 vendor/lib/libconnctrl.so
 vendor/lib64/libQtiTether.so
@@ -798,10 +798,10 @@ etc/firmware/tas2555_uCDSP.bin
 
 
 # Radio
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|0c344aef2c4fd505517703edd2024c69fecc0229
--app/datastatusnotification/datastatusnotification.apk|1e06cba273b9bb05514e25da50085fafd969de1c
--app/shutdownlistener/shutdownlistener.apk|447962c7a0424915a391e6ac7abf1fc262c144a0
--app/fastdormancy/fastdormancy.apk|5175c7dbad2084449fac8496df44fab82e309bc4
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|9663d917e5e2ab95db6ad5264a17d81f41a7f331
+-app/datastatusnotification/datastatusnotification.apk|8fde40665477e5c84190b5cfd4bde7ddc3200bbe
+-app/shutdownlistener/shutdownlistener.apk|e5b730f57749448581a1cb0dbfb5d1fd7996b3bb
+-app/fastdormancy/fastdormancy.apk|7f7cf1d778423f881213eb2a11bf5a843910654f
 bin/port-bridge
 bin/netmgrd
 bin/pm-proxy
@@ -816,10 +816,10 @@ etc/data/netmgr_config.xml
 etc/permissions/embms.xml
 etc/permissions/telephonyservice.xml
 etc/data/dsi_config.xml
--framework/QtiTelephonyServicelibrary.jar|2f19f3fa264d09fafac41bd7c5aa11034100e074
+-framework/QtiTelephonyServicelibrary.jar|9e49a57955b0a51e215b402718bcdf352a008ecd
 -framework/embmslibrary.jar|a06799495515305de3e5d432ec62a1f692200c99
--framework/qti-telephony-common.jar|6a1b5bc07936bb54c9d00b24aa6879ce5e69f2a5
--framework/qcrilhook.jar|a98216ff420d2f55241fd50dcfae325908ba8860
+-framework/qti-telephony-common.jar|fad0f05ea36a41eb2a5eb48b30c5397b188e57b8
+-framework/qcrilhook.jar|532eddacac04bccc3de01547a2a393cc85423912
 vendor/qcril.db
 lib/libmotext_inf.so
 lib/libril.so
@@ -942,7 +942,7 @@ vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
 # Time services
--app/TimeService/TimeService.apk|6d7ad3b15d6a21d157b7a6efc21d30f4393f5162
+-app/TimeService/TimeService.apk|3453c1f694410d2804fc26887f102d85a0fd6f73
 bin/time_daemon
 -vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
