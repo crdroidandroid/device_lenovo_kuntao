@@ -105,6 +105,6 @@ void vendor_load_properties()
     } 
     property_override("ro.build.product", "p2");
     property_override("ro.product.device", "p2");
-    property_override("ro.build.description", "kuntao_row-user 7.0 NRD90N P2a42_S233_170404_ROW release-keys");
-    property_override("ro.build.fingerprint", "Lenovo/kuntao_row/P2a42:7.0/NRD90N/P2a42_S233_170404_ROW:user/release-keys");
+    property_override("ro.build.description", "kuntao_row-user 7.0 NRD90N P2a42_S244_170725_ROW release-keys");
+    property_override("ro.build.fingerprint", "Lenovo/kuntao_row/P2a42:7.0/NRD90N/P2a42_S244_170725_ROW:user/release-keys");
 }
