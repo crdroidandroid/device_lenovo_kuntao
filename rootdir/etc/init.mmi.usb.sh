@@ -206,20 +206,10 @@ case "$bootmode" in
             echo 1 > /sys/class/android_usb/android0/secure
             echo "Disabling enumeration until bootup!"
         fi
-                echo "dvusb set"
 
         case "$mot_usb_config" in
             "mtp,adb" | "mtp" )
 		setprop persist.sys.usb.config $mot_usb_config
-                echo "dvusb mtp"
-            ;;
-            "ptp,adb" | "ptp" )
-		setprop persist.sys.usb.config $mot_usb_config
-                echo "dvusb ptp"
-            ;;
-            "midi,adb" | "midi" )
-		setprop persist.sys.usb.config $mot_usb_config
-                echo "dvusb midi"
             ;;
 	    #for lenovo internal test setting in ####33284#, keep usb config after reboot
             "mass_storage,adb" | "diag,serial_cdev,serial_tty,rmnet_bam,mass_storage,adb" )
@@ -231,7 +221,6 @@ case "$bootmode" in
 			setprop persist.sys.usb.config mtp
 		else
 			setprop persist.sys.usb.config mtp,adb
-                        echo "dvusb default"
 		fi
             ;;
         esac

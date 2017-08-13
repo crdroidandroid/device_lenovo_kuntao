@@ -126,7 +126,15 @@ PRODUCT_PACKAGES += \
 
 # Init scripts
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,${LOCAL_PATH}/rootdir/etc,root)
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:root/fstab.qcom \
+    $(LOCAL_PATH)/rootdir/etc/init.class_main.sh:root/init.class_main.sh \
+    $(LOCAL_PATH)/rootdir/etc/init.lenovo.common.rc:root/init.lenovo.common.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.mmi.usb.rc:root/init.mmi.usb.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.mmi.usb.sh:root/init.mmi.usb.sh \
+    $(LOCAL_PATH)/rootdir/etc/init.msm.usb.configfs.rc:root/init.msm.usb.configfs.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.qcom.rc:root/init.qcom.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    $(LOCAL_PATH)/rootdir/etc/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 # IPA Manager
 PRODUCT_PACKAGES += \

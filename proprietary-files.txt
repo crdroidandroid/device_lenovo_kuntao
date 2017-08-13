@@ -472,9 +472,6 @@ vendor/lib64/libqisl.so
 vendor/lib64/libtzdrmgenprov.so
 
 # EMMC
-bin/emmc_ffu
-bin/emmc_ffu.sh
-bin/emmc_ffu_15.sh
 etc/firmware/emmc_ffu_15_RX14MB.fw
 
 # Fastcharger
@@ -703,29 +700,6 @@ vendor/lib64/libhbtpclient.so
 etc/firmware/hbtp/hbtpcfg.dat
 etc/firmware/hbtp/qtc800s_dsp.bin
 
-# Inits
-etc/hcidump.sh
-etc/init.crda.sh
-etc/init.qcom.bt.sh
-etc/init.qcom.fm.sh
-etc/init.qti.ims.sh
-etc/init.ath3k.bt.sh
-etc/init.qcom.coex.sh
-etc/init.qcom.sdio.sh
-etc/init.qcom.uicc.sh
-etc/init.qcom.wifi.sh
-etc/hsic.control.bt.sh
-etc/init.qcom.audio.sh
-etc/init.qcom.debug.sh
-etc/qca6234-service.sh
-etc/init.qcom.efs.sync.sh
-etc/init.lenovo.persist.sh
-etc/init.qcom.post_boot.sh
-etc/vhw.xml
-bin/mv_files.sh
-bin/qsee_log.sh
-bin/init.mmi.touch.sh
-
 # IPA
 bin/ipacm-diag
 
@@ -784,16 +758,6 @@ vendor/lib64/libmmsw_detail_enhancement.so
 vendor/lib64/libmmsw_math.so
 vendor/lib64/libmmsw_opencl.so
 vendor/lib64/libmmsw_platform.so
-
-# Mmi
-bin/mmi
-bin/mmi_agent32
-bin/mmi_agent64
-bin/mmi_debug
-bin/mmi_diag
-bin/motobox
-lib/libTAS2555ftc.so
-lib64/libTAS2555ftc.so
 
 # Modem
 vendor/lib/libwms.so
@@ -1020,6 +984,10 @@ vendor/lib64/libdrplugin_client.so
 vendor/lib64/libevent_observer.so
 vendor/lib64/lib_acgdaemon.so
 vendor/lib64/sensor_calibrate.so
+
+# TAS
+lib/libTAS2555ftc.so
+lib64/libTAS2555ftc.so
 
 # Thermal
 vendor/bin/thermal-engine

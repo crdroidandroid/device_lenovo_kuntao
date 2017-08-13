@@ -34,8 +34,13 @@ datamode=`getprop persist.data.mode`
 netmgr=`getprop ro.use_data_netmgrd`
 
 case "$baseband" in
+    "apq")
+    setprop ro.radio.noril yes
+    stop ril-daemon
+esac
+
+case "$baseband" in
     "msm" | "unknown")
-    start qmuxd
     start ipacm-diag
     start ipacm
 
@@ -96,17 +101,12 @@ if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_versio
     mkdir /data/misc/radio/modem_config
     chmod 770 /data/misc/radio/modem_config
 # modify by linzb2,2016-05-06 begin
-# modify by xuwz1, 2016-11-23 begin 
     # cp -r /firmware/image/modem_pr/mcfg/configs/* /data/misc/radio/modem_config
     cp  /firmware/image/modem_pr/mcfg/configs/mbn_ota.txt /data/misc/radio/modem_config/mbn_ota.txt
-    #cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/africa/ntel/commerci/mcfg_sw.mbn /data/misc/radio/modem_config/ntel.mbn
-    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/apac/reliance/commerci/mcfg_sw.mbn /data/misc/radio/modem_config/rjil.mbn
-    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/eu/3uk/3uk/mcfg_sw.mbn /data/misc/radio/modem_config/3uk_gb.mbn
-    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/sea/smartfre/commerci/mcfg_sw.mbn /data/misc/radio/modem_config/smartfren.mbn
-    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/sea/ytl/gen_3gpp/mcfg_sw.mbn /data/misc/radio/modem_config/ytl.mbn
-    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/common/gcf/gen_3gpp/mcfg_sw.mbn /data/misc/radio/modem_config/gcf.mbn
-    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/row/default/gen_3gpp/mcfg_sw.mbn /data/misc/radio/modem_config/row.mbn
-# modify by xuwz1, 2016-11-23 end
+    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/kuntaopr/cmcc/commerci/volte_op/mcfg_sw.mbn /data/misc/radio/modem_config/mcfg_sw_cmcc.mbn
+    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/kuntaopr/ct/commerci/openmkt/mcfg_sw.mbn /data/misc/radio/modem_config/mcfg_sw_ct.mbn
+    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/kuntaopr/cu/commerci/openmkt/mcfg_sw.mbn /data/misc/radio/modem_config/mcfg_sw_cu.mbn
+    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/kuntaopr/row/gen_3gpp/mcfg_sw.mbn /data/misc/radio/modem_config/mcfg_sw_row.mbn
 # modify by linzb2,2016-05-06 end
     chown -hR radio.radio /data/misc/radio/modem_config
     cp /firmware/verinfo/ver_info.txt /data/misc/radio/ver_info.txt
