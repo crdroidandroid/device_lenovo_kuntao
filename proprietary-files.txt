@@ -519,13 +519,7 @@ bin/gpsone_daemon
 bin/garden_app
 bin/lowi-server
 etc/cacert_location.pem
-etc/flp.conf
-etc/gps.conf
-etc/izat.conf
-etc/lowi.conf
-etc/sap.conf
 etc/xtra_root_cert.pem
-etc/xtwifi.conf
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.vzw_library.xml
 etc/permissions/com.qualcomm.location.xml
