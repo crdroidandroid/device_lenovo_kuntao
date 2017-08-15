@@ -70,18 +70,6 @@ void vendor_load_properties()
         property_override("dalvik.vm.heaptargetutilization", "0.75");
         property_override("dalvik.vm.heapminfree", "4m");
         property_override("dalvik.vm.heapmaxfree", "16m");
-     // hwui stuff
-        property_override("ro.hwui.texture_cache_size", "72");
-        property_override("ro.hwui.layer_cache_size", "48");
-        property_override("ro.hwui.r_buffer_cache_size", "8");
-        property_override("ro.hwui.path_cache_size", "32");
-        property_override("ro.hwui.gradient_cache_size", "1");
-        property_override("ro.hwui.drop_shadow_cache_size", "6");
-        property_override("ro.hwui.texture_cache_flushrate", "0.4");
-        property_override("ro.hwui.text_small_cache_width", "1024");
-        property_override("ro.hwui.text_small_cache_height", "1024");
-        property_override("ro.hwui.text_large_cache_width", "2048");
-        property_override("ro.hwui.text_large_cache_height", "1024");
     } else {
     // dalvik stuff
         property_override("dalvik.vm.heapstartsize", "8m");
@@ -90,18 +78,6 @@ void vendor_load_properties()
         property_override("dalvik.vm.heaptargetutilization", "0.75");
         property_override("dalvik.vm.heapminfree", "512k");
         property_override("dalvik.vm.heapmaxfree", "8m");
-    // hwui stuff
-        property_override("ro.hwui.texture_cache_size", "72");
-        property_override("ro.hwui.layer_cache_size", "48");
-        property_override("ro.hwui.r_buffer_cache_size", "8");
-        property_override("ro.hwui.path_cache_size", "32");
-        property_override("ro.hwui.gradient_cache_size", "1");
-        property_override("ro.hwui.drop_shadow_cache_size", "6");
-        property_override("ro.hwui.texture_cache_flushrate", "0.4");
-        property_override("ro.hwui.text_small_cache_width", "1024");
-        property_override("ro.hwui.text_small_cache_height", "1024");
-        property_override("ro.hwui.text_large_cache_width", "2048");
-        property_override("ro.hwui.text_large_cache_height", "1024");
     } 
     property_override("ro.build.product", "p2");
     property_override("ro.product.device", "p2");
