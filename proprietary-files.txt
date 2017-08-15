@@ -1027,7 +1027,7 @@ vendor/lib64/libTimeService.so
 etc/firmware/ice40.bin
 
 # Wfd
--app/WfdService
+-app/WfdService/WfdService.apk
 bin/wfdservice
 etc/wfdconfig.xml
 -framework/WfdCommon.jar
