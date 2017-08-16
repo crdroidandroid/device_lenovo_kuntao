@@ -128,6 +128,8 @@ lib/libarcsoft_hdr.so
 lib/libarcsoft_beautyshot.so
 lib/libarcsoft_night_shot.so
 lib/libarcsoft_panorama_burstcapture.so
+vendor/lib/libllvd_smore.so
+vendor/lib/libllvd_sw_tnr.so
 vendor/lib/libChamomilePA.so
 vendor/lib/libcamera_bm_algo.so
 vendor/lib/libflash_pmic.so
