@@ -630,11 +630,6 @@ vendor/lib/libmmQSM.so
 vendor/lib/libOpenCL.so
 vendor/lib/libscale.so
 vendor/lib/libscalar.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
--vendor/lib/libsdm-disp-apis.so
-vendor/lib/libsdmextension.so
-vendor/lib/libsd_sdk_display.so
 vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-qdcm.so
 vendor/lib64/hw/vulkan.msm8953.so
@@ -664,11 +659,6 @@ vendor/lib64/libmmQSM.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libscale.so
 vendor/lib64/libscalar.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
--vendor/lib64/libsdm-disp-apis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libsd_sdk_display.so
 vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libmm-qdcm.so
 
