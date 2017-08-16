@@ -179,9 +179,6 @@ TARGET_RECOVERY_FSTAB := device/lenovo/p2/rootdir/etc/fstab.qcom
 BOARD_SEPOLICY_DIRS += device/lenovo/p2/sepolicy
 include device/qcom/sepolicy/sepolicy.mk
 
-# WFD
-BOARD_USES_WFD := true
-
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
