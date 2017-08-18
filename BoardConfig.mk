@@ -91,7 +91,6 @@ TARGET_TS_MAKEUP := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
-BACKLIGHT_PATH := "/sys/class/leds/button-backlight/brightness"
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
