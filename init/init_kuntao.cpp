@@ -30,17 +30,16 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <cstdlib>
-#include <fstream>
-#include <string>
+#include <stdio.h>
+#include <stdlib.h>
 #include <sys/sysinfo.h>
-#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
-#include <sys/_system_properties.h>
 
-#include "vendor_init.h"
+#include <android-base/properties.h>
+
 #include "property_service.h"
-#include "log.h"
-#include "util.h"
+#include "vendor_init.h"
+
+using android::base::SetProperty;
 
 void property_override(char const prop[], char const value[])
 {
@@ -64,23 +63,23 @@ void vendor_load_properties()
 {
     if (is4GB()) {
       // dalvik stuff
-        property_override("dalvik.vm.heapstartsize", "8m");
-        property_override("dalvik.vm.heapgrowthlimit", "384m");
-        property_override("dalvik.vm.heapsize", "1024m");
-        property_override("dalvik.vm.heaptargetutilization", "0.75");
-        property_override("dalvik.vm.heapminfree", "4m");
-        property_override("dalvik.vm.heapmaxfree", "16m");
+        SetProperty("dalvik.vm.heapstartsize", "8m");
+        SetProperty("dalvik.vm.heapgrowthlimit", "384m");
+        SetProperty("dalvik.vm.heapsize", "1024m");
+        SetProperty("dalvik.vm.heaptargetutilization", "0.75");
+        SetProperty("dalvik.vm.heapminfree", "4m");
+        SetProperty("dalvik.vm.heapmaxfree", "16m");
     } else {
     // dalvik stuff
-        property_override("dalvik.vm.heapstartsize", "8m");
-        property_override("dalvik.vm.heapgrowthlimit", "288m");
-        property_override("dalvik.vm.heapsize", "768m");
-        property_override("dalvik.vm.heaptargetutilization", "0.75");
-        property_override("dalvik.vm.heapminfree", "512k");
-        property_override("dalvik.vm.heapmaxfree", "8m");
+        SetProperty("dalvik.vm.heapstartsize", "8m");
+        SetProperty("dalvik.vm.heapgrowthlimit", "288m");
+        SetProperty("dalvik.vm.heapsize", "768m");
+        SetProperty("dalvik.vm.heaptargetutilization", "0.75");
+        SetProperty("dalvik.vm.heapminfree", "512k");
+        SetProperty("dalvik.vm.heapmaxfree", "8m");
     } 
-    property_override("ro.build.product", "kuntao");
-    property_override("ro.product.device", "kuntao");
-    property_override("ro.build.description", "kuntao_row-user 7.0 NRD90N P2a42_S244_170725_ROW release-keys");
-    property_override("ro.build.fingerprint", "Lenovo/kuntao_row/P2a42:7.0/NRD90N/P2a42_S244_170725_ROW:user/release-keys");
+    SetProperty("ro.build.product", "kuntao");
+    SetProperty("ro.product.device", "kuntao");
+    SetProperty("ro.build.description", "kuntao_row-user 7.0 NRD90N P2a42_S244_170725_ROW release-keys");
+    SetProperty("ro.build.fingerprint", "Lenovo/kuntao_row/P2a42:7.0/NRD90N/P2a42_S244_170725_ROW:user/release-keys");
 }
