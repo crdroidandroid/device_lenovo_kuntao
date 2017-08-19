@@ -127,7 +127,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libgnsspps \
     libcurl \
-    gps.msm8953
+    gps.msm8953 \
+    libshims_get_process_name
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
