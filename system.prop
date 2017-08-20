@@ -104,16 +104,8 @@ rild.libargs=-d /dev/smd0
 persist.radio.multisim.config=dsds
 persist.data.qmi.adb_logmask=0
 ro.telephony.default_network=9,1
-telephony.lteOnCdmaDevice=1
-persist.radio.rat_on=combine
-ril.subscription.types=NV,RUIM
-DEVICE_PROVISIONED=1
 ro.telephony.ril.config=simactivation
-persist.radio.custom_ecc=1
-persist.radio.ecc_hard_1=998
-persist.radio.ecc_hard_count=1
 ro.telephony.call_ring.multiple=false
-persist.radio.sib16_support=1
 
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
