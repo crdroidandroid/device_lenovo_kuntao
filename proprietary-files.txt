@@ -530,6 +530,7 @@ etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.vzw_library.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
+-priv-app/com.qualcomm.location/com.qualcomm.location.apk|fc1cd228bffaed84e87171da434f7a83de9db581
 -framework/com.qti.location.sdk.jar|97600139f3c9dd41eeed1da17fc03d4ec4ea035f
 -framework/com.qualcomm.location.vzw_library.jar|afab9bec6cf93bacac82f360dfc696922bbef0bc
 -framework/izat.xt.srv.jar|da31c6183f8d29251ce5656ddab6d4b386934382
