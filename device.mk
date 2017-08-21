@@ -79,7 +79,6 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libshims_camera \
     Snap
 
 # Display
