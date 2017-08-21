@@ -855,10 +855,10 @@ etc/firmware/tas2555_uCDSP.bin
 -app/datastatusnotification/datastatusnotification.apk|8fde40665477e5c84190b5cfd4bde7ddc3200bbe
 -app/shutdownlistener/shutdownlistener.apk|e5b730f57749448581a1cb0dbfb5d1fd7996b3bb
 -app/fastdormancy/fastdormancy.apk|7f7cf1d778423f881213eb2a11bf5a843910654f
+-app/QtiTelephonyService/QtiTelephonyService.apk
 bin/port-bridge
 bin/netmgrd
 bin/qmi_motext_hook
-lib64/libtzssm.so
 bin/radish
 bin/rild
 bin/rmt_storage
@@ -910,6 +910,7 @@ vendor/lib64/libsettings.so
 vendor/lib64/libsubsystem_control.so
 vendor/lib64/libSubSystemShutdown.so
 vendor/lib64/libxml.so
+lib64/libtzssm.so
 
 # SCVE
 vendor/lib/libscveBlobDescriptor.so
