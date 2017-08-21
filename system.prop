@@ -33,6 +33,8 @@ vidc.dec.disable.split.cpu=1
 vidc.enc.dcvs.extra-buff-count=2
 vidc.enc.disable_bframes=1
 vidc.enc.disable_pframes=1
+vidc.enc.dcvs.extra-buff-count=2
+camera.lowpower.record.enable=1
 
 # Cne/Dpm
 persist.cne.feature=1
