@@ -869,7 +869,9 @@ etc/data/netmgr_config.xml
 etc/permissions/embms.xml
 etc/permissions/telephonyservice.xml
 etc/data/dsi_config.xml
+-framework/QtiTelephonyServicelibrary.jar|9e49a57955b0a51e215b402718bcdf352a008ecd
 -framework/embmslibrary.jar|a06799495515305de3e5d432ec62a1f692200c99
+-framework/qti-telephony-common.jar|fad0f05ea36a41eb2a5eb48b30c5397b188e57b8
 -framework/qcrilhook.jar|532eddacac04bccc3de01547a2a393cc85423912
 vendor/qcril.db
 lib/libmotext_inf.so
