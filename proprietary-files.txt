@@ -398,7 +398,7 @@ etc/permissions/com.quicinc.cne.xml
 -framework/ConnectivityExt.jar|67025d09bbc7bb87bca1d15ab9c133eeb1ef2b9d
 -framework/cneapiclient.jar|3cb56a579341acfb16d2be2e41bac2c7b6ac34b4
 -framework/com.quicinc.cne.jar|2be59f78be920f93e68d5d6bdccaf5ada190744e
--priv-app/CNEService/CNEService.apk |bec91431fa8628008c3f04c38e05991f393e5c73
+-priv-app/CNEService/CNEService.apk|dccff21ad25991c9128138e7485327b92f93f296
 vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneqmiutils.so
@@ -411,7 +411,7 @@ vendor/lib64/libvendorconn.so
 vendor/lib64/libwqe.so
 
 # Display Color Calibration
--vendor/app/colorservice/colorservice.apk|aa5db32920e608b67f5e4102b2dbb99a8005f502
+-vendor/app/colorservice/colorservice.apk|ec71d604220c9e0e1d481f7c66fd3bacdea82331
 -etc/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml
 
 # DPM
@@ -420,9 +420,9 @@ etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
--framework/com.qti.dpmframework.jar
--framework/dpmapi.jar
--framework/tcmclient.jar
+-framework/com.qti.dpmframework.jar|7d855e9cf5d10cd88cdcd9c9bd16120afcaa7e72
+-framework/dpmapi.jar|0015235ff71d52d1b340b10ce4fa737fa26975ef
+-framework/tcmclient.jar|e7149c664f4b1841139ab816c0d4e0942df0583c
 vendor/lib/libdpmctmgr.so
 vendor/lib/libdpmfdmgr.so
 vendor/lib/libdpmframework.so
@@ -530,9 +530,9 @@ etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.vzw_library.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
--priv-app/com.qualcomm.location/com.qualcomm.location.apk|fc1cd228bffaed84e87171da434f7a83de9db581
--framework/com.qti.location.sdk.jar|97600139f3c9dd41eeed1da17fc03d4ec4ea035f
--framework/com.qualcomm.location.vzw_library.jar|afab9bec6cf93bacac82f360dfc696922bbef0bc
+-priv-app/com.qualcomm.location/com.qualcomm.location.apk|c6d4db563ade42f1b275cc35a830afbeebb7a2bd
+-framework/com.qti.location.sdk.jar|63b3874e7275a572a25b248ab510b3b96b6fa915
+-framework/com.qualcomm.location.vzw_library.jar|55577447c6a28fe370a4ba3bed128e17516e0774
 -framework/izat.xt.srv.jar|da31c6183f8d29251ce5656ddab6d4b386934382
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
@@ -764,7 +764,7 @@ vendor/lib/libwms.so
 vendor/lib64/libwms.so
 
 # Network
--priv-app/QtiTetherService/QtiTetherService.apk|87889aa72256f8d4a7e12ca6392be8aab5c92cb3
+-priv-app/QtiTetherService/QtiTetherService.apk|a873344ec4f4c6c35a8902f3aec74ff8f472348c
 vendor/lib/libQtiTether.so
 vendor/lib/libconnctrl.so
 vendor/lib64/libQtiTether.so
@@ -851,11 +851,11 @@ etc/firmware/leia_pm4_470.fw
 etc/firmware/tas2555_uCDSP.bin
 
 # Radio
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|9663d917e5e2ab95db6ad5264a17d81f41a7f331
--app/datastatusnotification/datastatusnotification.apk|8fde40665477e5c84190b5cfd4bde7ddc3200bbe
--app/shutdownlistener/shutdownlistener.apk|e5b730f57749448581a1cb0dbfb5d1fd7996b3bb
--app/fastdormancy/fastdormancy.apk|7f7cf1d778423f881213eb2a11bf5a843910654f
--app/QtiTelephonyService/QtiTelephonyService.apk
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|1790f6c392f85698c9ad32e31757cff85c98c14a
+-app/datastatusnotification/datastatusnotification.apk|e03f14d6a600a0539aed9abaeb2b3084529c1f42
+-app/shutdownlistener/shutdownlistener.apk|b69d2d2143846cc103329e56942d51bdaed1d207
+-app/fastdormancy/fastdormancy.apk|8b82a4d2bc686c9e0da73a42a047a6f61d457cda
+-app/QtiTelephonyService/QtiTelephonyService.apk|2bb7ed918a087b7f15d499472b49f933d8fccbba
 bin/port-bridge
 bin/netmgrd
 bin/qmi_motext_hook
@@ -869,10 +869,10 @@ etc/data/netmgr_config.xml
 etc/permissions/embms.xml
 etc/permissions/telephonyservice.xml
 etc/data/dsi_config.xml
--framework/QtiTelephonyServicelibrary.jar|9e49a57955b0a51e215b402718bcdf352a008ecd
+-framework/QtiTelephonyServicelibrary.jar|f7cbc2f2f56fb998b7c3c6a4825f1a3f9e57e12f
 -framework/embmslibrary.jar|a06799495515305de3e5d432ec62a1f692200c99
--framework/qti-telephony-common.jar|fad0f05ea36a41eb2a5eb48b30c5397b188e57b8
--framework/qcrilhook.jar|532eddacac04bccc3de01547a2a393cc85423912
+-framework/qti-telephony-common.jar|b25a75b03b9b3ca67acf0bcc31c6f51dddccd7b9
+-framework/qcrilhook.jar|4ae66636022493461ebfd0eee901c2bf359b7ff9
 vendor/qcril.db
 lib/libmotext_inf.so
 lib/libril.so
@@ -998,7 +998,7 @@ vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
 # Time services
--app/TimeService/TimeService.apk|3453c1f694410d2804fc26887f102d85a0fd6f73
+-app/TimeService/TimeService.apk|2b874af6b5ebf4d5ecfdc893a4731574bf02bb05
 bin/time_daemon
 -vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
