@@ -82,39 +82,3 @@ start_copying_prebuilt_qcril_db()
 #
 start_copying_prebuilt_qcril_db
 echo 1 > /data/misc/radio/db_check_done
-
-#
-# Make modem config folder and copy firmware config to that folder for RIL
-#
-if [ -f /data/misc/radio/ver_info.txt ]; then
-    prev_version_info=`cat /data/misc/radio/ver_info.txt`
-else
-    prev_version_info=""
-fi
-
-# modify by linzb2,2016-05-06 begin
-# cur_version_info=`cat /firmware/verinfo/ver_info.txt`
-cur_version_info=`getprop ro.product.sw.internal.version`
-# modify by linzb2,2016-05-06 end
-if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
-    rm -rf /data/misc/radio/modem_config
-    mkdir /data/misc/radio/modem_config
-    chmod 770 /data/misc/radio/modem_config
-# modify by linzb2,2016-05-06 begin
-    # cp -r /firmware/image/modem_pr/mcfg/configs/* /data/misc/radio/modem_config
-    cp  /firmware/image/modem_pr/mcfg/configs/mbn_ota.txt /data/misc/radio/modem_config/mbn_ota.txt
-    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/kuntaopr/cmcc/commerci/volte_op/mcfg_sw.mbn /data/misc/radio/modem_config/mcfg_sw_cmcc.mbn
-    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/kuntaopr/ct/commerci/openmkt/mcfg_sw.mbn /data/misc/radio/modem_config/mcfg_sw_ct.mbn
-    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/kuntaopr/cu/commerci/openmkt/mcfg_sw.mbn /data/misc/radio/modem_config/mcfg_sw_cu.mbn
-    cp  /firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/kuntaopr/row/gen_3gpp/mcfg_sw.mbn /data/misc/radio/modem_config/mcfg_sw_row.mbn
-# modify by linzb2,2016-05-06 end
-    chown -hR radio.radio /data/misc/radio/modem_config
-    cp /firmware/verinfo/ver_info.txt /data/misc/radio/ver_info.txt
-    chown radio.radio /data/misc/radio/ver_info.txt
-# modify by linzb2,2016-05-06 begin
-    echo $cur_version_info > /data/misc/radio/ver_info.txt
-# modify by linzb2,2016-05-06 end
-fi
-cp /firmware/image/modem_pr/mbn_ota.txt /data/misc/radio/modem_config
-chown radio.radio /data/misc/radio/modem_config/mbn_ota.txt
-echo 1 > /data/misc/radio/copy_complete
