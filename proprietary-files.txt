@@ -855,7 +855,6 @@ etc/firmware/tas2555_uCDSP.bin
 -app/datastatusnotification/datastatusnotification.apk|e03f14d6a600a0539aed9abaeb2b3084529c1f42
 -app/shutdownlistener/shutdownlistener.apk|b69d2d2143846cc103329e56942d51bdaed1d207
 -app/fastdormancy/fastdormancy.apk|8b82a4d2bc686c9e0da73a42a047a6f61d457cda
--app/QtiTelephonyService/QtiTelephonyService.apk|2bb7ed918a087b7f15d499472b49f933d8fccbba
 bin/port-bridge
 bin/netmgrd
 bin/qmi_motext_hook
@@ -869,9 +868,7 @@ etc/data/netmgr_config.xml
 etc/permissions/embms.xml
 etc/permissions/telephonyservice.xml
 etc/data/dsi_config.xml
--framework/QtiTelephonyServicelibrary.jar|f7cbc2f2f56fb998b7c3c6a4825f1a3f9e57e12f
 -framework/embmslibrary.jar|a06799495515305de3e5d432ec62a1f692200c99
--framework/qti-telephony-common.jar|b25a75b03b9b3ca67acf0bcc31c6f51dddccd7b9
 -framework/qcrilhook.jar|4ae66636022493461ebfd0eee901c2bf359b7ff9
 vendor/qcril.db
 lib/libmotext_inf.so
