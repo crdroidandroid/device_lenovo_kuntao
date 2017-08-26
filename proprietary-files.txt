@@ -65,11 +65,18 @@ vendor/etc/audio_effects.conf
 vendor/etc/audio_output_policy.conf
 etc/drc/drc_cfg_5.1.txt
 etc/drc/drc_cfg_AZ.txt
+etc/speaker.ftcfg
 etc/surround_sound_3mic/surround_sound_rec_5.1.cfg
 etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 etc/mixer_paths_mtp.xml
 etc/mixer_paths.xml
 etc/mixer_paths_skuk.xml
+etc/a2dp_audio_policy_configuration.xml
+etc/audio_policy_volumes.xml
+etc/capability.xml
+etc/default_volume_tables.xml
+etc/r_submix_audio_policy_configuration.xml
+etc/usb_audio_policy_configuration.xml
 etc/aanc_tuning_mixer.txt
 etc/mixer_paths_qrd_sku3.xml
 etc/mixer_paths_qrd_skuh.xml
@@ -79,6 +86,8 @@ etc/mixer_paths_qrd_skun.xml
 etc/mixer_paths_qrd_skuhf.xml
 etc/sound_trigger_mixer_paths.xml
 etc/audio_policy.conf
+etc/audio_policy_configuration.xml
+etc/audio_platform_info.xml
 etc/audio_platform_info_extcodec.xml
 etc/mixer_paths_wcd9306.xml
 etc/mixer_paths_wcd9326.xml
@@ -87,10 +96,7 @@ etc/mixer_paths_wcd9335.xml
 etc/sound_trigger_mixer_paths_wcd9306.xml
 etc/sound_trigger_mixer_paths_wcd9330.xml
 etc/sound_trigger_mixer_paths_wcd9335.xml
-etc/mixer_paths_wcd9306.xml
-etc/mixer_paths_wcd9326.xml
-etc/mixer_paths_wcd9330.xml
-etc/mixer_paths_wcd9335.xml
+etc/sound_trigger_platform_info.xml
 
 # Audio ACDB
 etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
