@@ -169,7 +169,6 @@ PRODUCT_PACKAGES += \
     libnfc_jni \
     com.android.nfc_extras \
     NfcNci \
-    nfc_nci.bcm2079x.default \
     Tag
 
 # Power HAL
