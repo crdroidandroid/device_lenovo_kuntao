@@ -884,16 +884,15 @@ etc/firmware/leia_pm4_470.fw
 etc/firmware/tas2555_uCDSP.bin
 
 # Radio
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|1790f6c392f85698c9ad32e31757cff85c98c14a
--app/datastatusnotification/datastatusnotification.apk|e03f14d6a600a0539aed9abaeb2b3084529c1f42
--app/shutdownlistener/shutdownlistener.apk|b69d2d2143846cc103329e56942d51bdaed1d207
--app/fastdormancy/fastdormancy.apk|8b82a4d2bc686c9e0da73a42a047a6f61d457cda
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|08853164bffe2b34aa26e6d2a6a0accdca5fd2fd
+-app/datastatusnotification/datastatusnotification.apk|d17de48b369ef4de4f513c6e2f4239f65496dc51
+-app/shutdownlistener/shutdownlistener.apk|343fc7da8b550d2b25924192d11684a680461376
+-app/fastdormancy/fastdormancy.apk|f439081721e580d37984a7c03c53055e362a0542
 -app/QtiTelephonyService/QtiTelephonyService.apk|c37f4c23072cb16a7275871abd4dafd6d222830d
 bin/port-bridge
 bin/netmgrd
 bin/qmi_motext_hook
 bin/radish
-bin/rild
 bin/rmt_storage
 bin/tftp_server
 bin/iop
@@ -905,10 +904,10 @@ etc/data/dsi_config.xml
 -framework/QtiTelephonyServicelibrary.jar|97afc97ef0844c1c7d6c99835ddf038d42dbfd4b
 -framework/embmslibrary.jar|a06799495515305de3e5d432ec62a1f692200c99
 -framework/qti-telephony-common.jar|3cea332c3cc179fae5691763c8e55027cc76ffc8
--framework/qcrilhook.jar|4ae66636022493461ebfd0eee901c2bf359b7ff9
+-framework/qcrilhook.jar|ba5266e9a3e9c6f24985bf461871609d472c5dac
+-framework/qcnvitems.jar|24494a8f1aaa969282dc217fb71f05af5efa1336
 vendor/qcril.db
 lib/libmotext_inf.so
-lib/libril.so
 vendor/bin/qti
 vendor/lib/libconfigdb.so
 vendor/lib/liblqe.so
@@ -926,7 +925,6 @@ vendor/lib/libSubSystemShutdown.so
 vendor/lib/libxml.so
 lib64/libqmimotext.so
 lib64/libmotext_inf.so
-lib64/libril.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
