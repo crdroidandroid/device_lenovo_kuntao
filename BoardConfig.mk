@@ -102,6 +102,9 @@ BOARD_HARDWARE_CLASS += \
 # CNE | DPM
 BOARD_USES_QCNE := true
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := device/lenovo/kuntao/config.fs
+
 # FM
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 BOARD_HAVE_QCOM_FM := true
