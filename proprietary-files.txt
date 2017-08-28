@@ -700,6 +700,42 @@ vendor/lib64/libhbtpclient.so
 etc/firmware/hbtp/hbtpcfg.dat
 etc/firmware/hbtp/qtc800s_dsp.bin
 
+# IMS
+bin/ims_rtp_daemon|d5ed9cfbd0dd9f7d1abb7f8c9191760432af2985
+bin/imscmservice|f5ce2fb129e099c05cddec0702403ac6154550c5
+bin/imsdatadaemon|51b106a5a4ee93e7d7b9f769d0dc11b1ec2fab65
+bin/imsqmidaemon|befafd569749f93595f77713df0dec2321429d19
+etc/permissions/imscm.xml
+etc/permissions/qti-vzw-ims-internal.xml
+-framework/imscmlibrary.jar|0c24d6540c06efede52169c1445272f43748180f
+-framework/rcsimssettings.jar|566a0f637344ca3182aca33753e404977fc77ecc
+-vendor/app/ims/ims.apk|61f311759fd87b62e320c72d3917594d927e3373
+-vendor/app/imssettings/imssettings.apk|84bdb8fec5f623d9d7030edfccc35bdfc7b0914f
+vendor/framework/qti-vzw-ims-internal.jar|7e945cb593192f65cfc2075c8c09f6c8eac608b1
+vendor/lib64/lib-dplmedia.so|08cc356e607834cea11a85d704eede3ebe4f2aa4
+vendor/lib64/lib-ims-rcscmjni.so|e61f46cd34da10ec7c20bbc281186e8f77f8504d
+vendor/lib64/lib-imscamera.so|aab9348362ef95553bd38eef2a6d58f68f26ba52
+vendor/lib64/lib-imsdpl.so|fd29d244f0e82078f5651d939d7cb98e8a4cab1d
+vendor/lib64/lib-imsqimf.so|ec5b3559556f238d1f2f20196003d2f2af878c85
+vendor/lib64/lib-imsrcs.so|0ef51d725b3c8f814c9a025c2547a5829fd82857
+vendor/lib64/lib-imsrcscm.so|13667566310101b639f77bda78913d073dd97588
+vendor/lib64/lib-imsrcscmclient.so|7a7f7b601236204c35438cfa9de33d9591bf293a
+vendor/lib64/lib-imsrcscmservice.so|078995442998a58d3bd7b0b2bfe8fd6abbe1f744
+vendor/lib64/lib-imss.so|039f45c38aa0dd76a65b2aa35af179166a1b5026
+vendor/lib64/lib-imsSDP.so|9713d46c374b0b11dcb5a6fbb270facca49c23ad
+vendor/lib64/lib-imsvt.so|6cb38d8cc1fd5601a0db8a49fc2a7924fd45f171
+vendor/lib64/lib-imsxml.so|c023d1afca2c4d5551afc9a9fe749f0eecc08860
+vendor/lib64/lib-rcsimssjni.so|8e78513a3ad4d9bcfbde73481c777bbb51f743c2
+vendor/lib64/lib-rcsjni.so|1970461b0e5d5e3d2bfb84eea3ef2930107ff960
+vendor/lib64/lib-rtpcommon.so|ecc31f93f682908e8d4ba41664da5737d8065d40
+vendor/lib64/lib-rtpcore.so|aa64cf95bf2c82dcc09a97566b8d8b909650bbc1
+vendor/lib64/lib-rtpdaemoninterface.so|cc7dd1271967297158ab7efe3eb7400766c8bc08
+vendor/lib64/lib-rtpsl.so|2cfc03cc700e9517bb07cdfedf0f7037021c3a36
+vendor/lib64/libimscamera_jni.so|56dc79a37353f5cd7b51411a7e0e7640a93eb4b5
+vendor/lib64/libimsmedia_jni.so|e878e03387d5497610ae031b4ecc974318dfbb7b
+vendor/lib64/librcc.so|2f95ca3a5f6bd1bb94434918bad581cd35d80f1d
+vendor/lib64/libvoice-svc.so|259b062f54baabc9045dce02cc25263acd1436cd
+
 # IPA
 bin/ipacm-diag
 
