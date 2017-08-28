@@ -36,7 +36,7 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" "true"
 
 # Copyright headers and guards
-write_headers "p2"
+write_headers "kuntao"
 
 # The standard device blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt

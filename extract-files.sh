@@ -17,7 +17,7 @@
 #
 
 set -e
-export DEVICE=p2
+export DEVICE=kuntao
 export VENDOR=lenovo
 
 INITIAL_COPYRIGHT_YEAR=2017

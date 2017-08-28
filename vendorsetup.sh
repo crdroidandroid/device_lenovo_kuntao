@@ -1,3 +1,3 @@
-add_lunch_combo lineage_p2-eng
-add_lunch_combo lineage_p2-user
-add_lunch_combo lineage_p2-userdebug
+add_lunch_combo lineage_kuntao-eng
+add_lunch_combo lineage_kuntao-user
+add_lunch_combo lineage_kuntao-userdebug

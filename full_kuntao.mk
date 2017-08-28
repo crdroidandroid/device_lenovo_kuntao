@@ -18,16 +18,16 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from p2 device
-$(call inherit-product, device/lenovo/p2/device.mk)
+# Inherit from kuntao device
+$(call inherit-product, device/lenovo/kuntao/device.mk)
 
 # Device vendor
-$(call inherit-product-if-exists, vendor/lenovo/p2/p2-vendor.mk)
+$(call inherit-product-if-exists, vendor/lenovo/kuntao/kuntao-vendor.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_DEVICE := p2
-PRODUCT_NAME := full_p2
+PRODUCT_DEVICE := kuntao
+PRODUCT_NAME := full_kuntao
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo P2
 PRODUCT_MANUFACTURER := lenovo

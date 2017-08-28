@@ -77,7 +77,7 @@ USE_XML_AUDIO_POLICY_CONF := 1
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_READ_ADDR_FROM_PROP := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/p2/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/kuntao/bluetooth
 
 # Board
 TARGET_BOARD_PLATFORM := msm8953
@@ -123,8 +123,8 @@ TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_p2
-TARGET_RECOVERY_DEVICE_MODULES := libinit_p2
+TARGET_INIT_VENDOR_LIB := libinit_kuntao
+TARGET_RECOVERY_DEVICE_MODULES := libinit_kuntao
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # Kernel
@@ -133,7 +133,7 @@ BOARD_KERNEL_CMDLINE := sched_enable_hmp=1 sched_enable_power_aware=1 console=nu
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --tags_offset 0x00000100
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-TARGET_KERNEL_SOURCE := kernel/lenovo/p2
+TARGET_KERNEL_SOURCE := kernel/lenovo/msm8953
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
@@ -167,17 +167,17 @@ TARGET_PER_MGR_ENABLED := true
 TARGET_POWERHAL_VARIANT := qcom
 
 # Properties
-TARGET_SYSTEM_PROP += device/lenovo/p2/system.prop
+TARGET_SYSTEM_PROP += device/lenovo/kuntao/system.prop
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/lenovo/p2/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/lenovo/kuntao/rootdir/etc/fstab.qcom
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/lenovo/p2/sepolicy
+BOARD_SEPOLICY_DIRS += device/lenovo/kuntao/sepolicy
 include device/qcom/sepolicy/sepolicy.mk
 
 # WiFi
