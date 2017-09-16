@@ -197,7 +197,8 @@ vendor/lib/libmmcamera_isp_chroma_enhan40.so
 vendor/lib/libmmcamera2_frame_algorithm.so
 vendor/lib/libmmcamera_isp_mesh_rolloff40.so
 vendor/lib/libmmcamera_dbg.so
-vendor/lib/libmmcamera_stillmore_lib.so
+vendor/lib/libmmcamera_stillmore_lib.so|3b15e48502c61d1c638f270befaa6a546c96f184
+vendor/lib/libmmcamera_paaf_lib.so|4f178d5a5703008cc22fee613d1e5aa110ac2f96
 vendor/lib/libmmcamera_ubifocus_lib.so
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_isp_modules.so
