@@ -53,6 +53,9 @@ on init
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
 on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
     mount_all fstab.qcom
 
     mkdir /persist/data 0700 system system
