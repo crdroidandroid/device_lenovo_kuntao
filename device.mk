@@ -121,7 +121,8 @@ PRODUCT_BOOT_JARS += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-lite
+    libprotobuf-cpp-lite \
+    android.hardware.drm@1.0-impl
 
 # Ebtables
 PRODUCT_PACKAGES += \
