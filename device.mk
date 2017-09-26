@@ -251,6 +251,9 @@ PRODUCT_PACKAGES += \
     libxml2
 
 # Sensor
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:system/etc/sensors/hals.conf
 
