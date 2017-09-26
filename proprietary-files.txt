@@ -61,7 +61,6 @@ vendor/lib64/libFlacSwDec.so
 vendor/lib64/libacdbmapper.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudiodevarb.so
-vendor/etc/audio_effects.conf
 vendor/etc/audio_output_policy.conf
 etc/drc/drc_cfg_5.1.txt
 etc/drc/drc_cfg_AZ.txt

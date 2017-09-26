@@ -73,6 +73,9 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     tinymix
 
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf
+
 # Charger
 PRODUCT_PACKAGES += \
    charger_res_images
