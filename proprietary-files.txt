@@ -1010,9 +1010,6 @@ vendor/lib/libWVStreamControlAPI_L3.so
 bin/cnss-daemon
 bin/cnss_diag
 bin/wcnss_service
-etc/hostapd/hostapd.accept
-etc/hostapd/hostapd_default.conf
-etc/hostapd/hostapd.deny
 etc/wifi/WCNSS_qcom_cfg.ini
 etc/wifi/fstman.ini
 etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_lenovo.bin
