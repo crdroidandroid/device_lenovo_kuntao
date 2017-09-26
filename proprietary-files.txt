@@ -532,7 +532,6 @@ framework/com.qualcomm.location.vzw_library.jar|f65f2b3fedcd791c8d8a1fe365a01647
 framework/izat.xt.srv.jar|da31c6183f8d29251ce5656ddab6d4b386934382
 -lib64/libloc_api_v02.so|2b6e61633ffb3e332bb2c03c3329f4250e403f10
 lib64/libloc_ds_api.so|388b82bb83cb54d3ff2f89ce38cb52f65d582448
--priv-app/com.qualcomm.location/com.qualcomm.location.apk|7cd518c3ce752a27b2d245e214da1a9fd3dd118b
 vendor/bin/slim_daemon|8df52257e5408b80060d91587d0b5adb1543af2d
 vendor/lib64/hw/flp.default.so|912954e32f60f664cf6116af8503e75f07c5381d
 vendor/lib64/libalarmservice_jni.so|f05bbf58be4bbea47cbfea519bb14025eea5a6d6
