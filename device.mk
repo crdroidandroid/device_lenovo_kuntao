@@ -263,6 +263,10 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
 # Sensor
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
