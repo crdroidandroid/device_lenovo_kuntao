@@ -1483,8 +1483,3 @@ service vfmService /system/bin/vfmService
     class main
     seclabel u:r:vfmService:s0
     disabled
-
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user system
-
