@@ -13,9 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
-
 # Architecture
 TARGET_BOARD_SUFFIX := _64
 TARGET_ARCH := arm64
