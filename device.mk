@@ -103,6 +103,7 @@ PRODUCT_PACKAGES += \
     gralloc.msm8953 \
     hwcomposer.msm8953 \
     liboverlay \
+    libgenlock \
     memtrack.msm8953
 
 # Display Calibration
@@ -286,6 +287,8 @@ PRODUCT_PACKAGES += \
     wificond \
     wifilogd \
     hostapd \
+    libwifi-hal-qcom \
+    libcld80211 \
     wpa_supplicant \
     wpa_supplicant.conf
 
