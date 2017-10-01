@@ -242,7 +242,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.mmi.usb.rc \
-    init.lenovo.common.rc \
     init.qcom.rc \
     init.msm.usb.configfs.rc \
     ueventd.qcom.rc

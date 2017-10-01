@@ -26,7 +26,7 @@
 #
 
 import init.msm.usb.configfs.rc
-import init.lenovo.common.rc
+import init.mmi.usb.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -62,6 +62,9 @@ on fs
 
     mkdir /persist/data 0700 system system
     mkdir /persist/bms 0700 root system
+
+    # use /persist as phony PDS partition
+    symlink /persist /pds
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -223,6 +226,20 @@ on boot
     chown system system /sys/class/power_supply/ext-charger/otg_usb_short
     chmod 0666 /sys/class/power_supply/ext-charger/otg_usb_short
 #lenovo-sw weiweij added for file point access end
+
+# access permission for rgb led
+    chmod 0664	/sys/class/leds/rgb/brightness
+    chown system system /sys/class/leds/rgb/brightness
+    chown system system /sys/class/leds/rgb/blink
+
+# Change ownership for Dynamic-CABC feature
+    chown system system /sys/class/graphics/fb0/cabc_mode
+# Change ownership for for HBM feature
+    chown system system /sys/class/graphics/fb0/hbm
+# Change ownership for for ACL feature
+    chown system system /sys/class/graphics/fb0/acl_mode
+# Change ownership for for seed feature
+    chown system system /sys/class/graphics/fb0/color_profile
 
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/fw_name PR1702898-s3528t_00260005_00380008.img
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/update_fw 1
@@ -844,6 +861,60 @@ on post-fs
     chown system system /sys/devices/platform/elan_alsps/set_delay_ms
     chmod 0660 /sys/devices/platform/elan_alsps/set_delay_ms
 #lenovo-sw caoyi1 add for Proximity and Light sensor,epl8802 end
+
+#lenovo.common.rc import begin
+    mkdir /persist/camera 0755 mot_tcmd mot_tcmd
+    mkdir /persist/camera/focus 0775 camera mot_tcmd
+    mkdir /persist/camera/ledcal 0775 camera mot_tcmd
+    mkdir /persist/factory 0755 mot_tcmd mot_tcmd
+    mkdir /persist/factory/audio 0755 mot_tcmd system
+    mkdir /persist/public 0755 mot_tcmd mot_tcmd
+    mkdir /persist/public/atvc 0770 mot_atvc shell
+    mkdir /persist/public/battd 0755 mot_accy mot_tcmd
+    mkdir /persist/public/hiddenmenu 0755 radio radio
+    mkdir /persist/public/hiddenmenu/data 0775 system mot_tcmd
+    mkdir /persist/public/locale 0700 system system
+    mkdir /persist/public/omadm 0700 radio radio
+    mkdir /persist/public/svcs 0770 system system
+    mkdir /persist/wifi 0755 mot_tcmd mot_tcmd
+    mkdir /persist/bt 0755 mot_tcmd bluetooth
+    mkdir /persist/wmdrm 0775 mot_drm mot_drm
+    mkdir /persist/security 02770 mot_tpapi mot_tpapi
+    mkdir /persist/batt_health 0755 mot_pwric mot_pwric
+    mkdir /persist/mdm 0770 radio radio
+
+    chown mot_tcmd mot_tcmd /persist/factory/fti
+    chmod 0660 /persist/factory/fti
+    chown mot_tcmd mot_tcmd /persist/factory/byte
+    chmod 0660 /persist/factory/byte
+    chmod 0660 /persist/wifi/wlan_mac.bin
+    chown mot_tcmd mot_tcmd /persist/bt/bt_bdaddr
+    chmod 0664 /persist/bt/bt_bdaddr
+    chmod 0600 /persist/whisper/whisper_only/vector0.bin
+
+    chown mot_tcmd root /sys/class/power_supply/ext-charger/charge_enabled
+    chmod 0664  /sys/class/power_supply/ext-charger/charge_enabled
+    chown mot_tcmd root /sys/class/power_supply/ext-charger-dual/charge_enabled
+    chmod 0664  sys/class/power_supply/ext-charger-dual/charge_enabled
+    chown mot_tcmd root /sys/class/power_supply/ext-charger/battery_charging_enabled
+    chmod 0664  /sys/class/power_supply/ext-charger/battery_charging_enabled
+    chown mot_tcmd root /sys/class/power_supply/ext-charger-dual/battery_charging_enabled
+    chmod 0664  /sys/class/power_supply/ext-charger-dual/battery_charging_enabled
+    chown mot_tcmd root /sys/class/power_supply/ext-charger/current_max
+    chmod 0664  /sys/class/power_supply/ext-charger/current_max
+    chown mot_tcmd root /sys/class/power_supply/ext-charger-dual/current_max
+    chmod 0664  /sys/class/power_supply/ext-charger-dual/current_max
+    chown mot_tcmd root /sys/class/power_supply/ext-charger/input_current_max
+    chmod 0664  /sys/class/power_supply/ext-charger/input_current_max
+    chown mot_tcmd root /sys/class/power_supply/ext-charger-dual/input_current_max
+    chmod 0664  /sys/class/power_supply/ext-charger-dual/input_current_max
+    chown mot_tcmd root /sys/class/power_supply/ext-charger/current_max
+    chmod 0664  /sys/class/power_supply/ext-charger/current_max
+    chown mot_tcmd root /sys/class/power_supply/battery/device/force_chg_fail_clear
+    chmod 0664  /sys/class/power_supply/battery/device/force_chg_fail_clear
+    chown mot_tcmd root /sys/class/power_supply/ext-charger/usb_otg
+    chmod 0664  /sys/class/power_supply/ext-charger/usb_otg
+#lenovo.common.rc import end
 
 # msm specific files that need to be created on /data
 on post-fs-data
