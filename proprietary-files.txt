@@ -815,7 +815,6 @@ etc/firmware/tas2555_uCDSP.bin
 -app/datastatusnotification/datastatusnotification.apk|d17de48b369ef4de4f513c6e2f4239f65496dc51
 -app/shutdownlistener/shutdownlistener.apk|343fc7da8b550d2b25924192d11684a680461376
 -app/fastdormancy/fastdormancy.apk|f439081721e580d37984a7c03c53055e362a0542
--app/QtiTelephonyService/QtiTelephonyService.apk|c37f4c23072cb16a7275871abd4dafd6d222830d
 bin/port-bridge
 bin/netmgrd
 bin/qmi_motext_hook
@@ -828,9 +827,7 @@ etc/data/netmgr_config.xml
 etc/permissions/embms.xml
 etc/permissions/telephonyservice.xml
 etc/data/dsi_config.xml
--framework/QtiTelephonyServicelibrary.jar|97afc97ef0844c1c7d6c99835ddf038d42dbfd4b
 -framework/embmslibrary.jar|a06799495515305de3e5d432ec62a1f692200c99
--framework/qti-telephony-common.jar|3cea332c3cc179fae5691763c8e55027cc76ffc8
 -framework/qcrilhook.jar|ba5266e9a3e9c6f24985bf461871609d472c5dac
 -framework/qcnvitems.jar|24494a8f1aaa969282dc217fb71f05af5efa1336
 vendor/qcril.db
