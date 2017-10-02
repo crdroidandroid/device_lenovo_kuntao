@@ -723,7 +723,6 @@ vendor/lib/libwms.so
 vendor/lib64/libwms.so
 
 # Network
--priv-app/QtiTetherService/QtiTetherService.apk|a873344ec4f4c6c35a8902f3aec74ff8f472348c
 vendor/lib/libQtiTether.so
 vendor/lib/libconnctrl.so
 vendor/lib64/libQtiTether.so
