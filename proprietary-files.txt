@@ -403,8 +403,6 @@ etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
 -framework/ConnectivityExt.jar|67025d09bbc7bb87bca1d15ab9c133eeb1ef2b9d
 -framework/cneapiclient.jar|3cb56a579341acfb16d2be2e41bac2c7b6ac34b4
--framework/com.quicinc.cne.jar|2be59f78be920f93e68d5d6bdccaf5ada190744e
--priv-app/CNEService/CNEService.apk|dccff21ad25991c9128138e7485327b92f93f296
 vendor/lib/libcneqmiutils.so
 vendor/lib/libvendorconn.so
 vendor/lib/libwqe.so
