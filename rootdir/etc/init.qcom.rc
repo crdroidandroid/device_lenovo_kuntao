@@ -262,7 +262,6 @@ on boot
     mkdir /dev/validity 0775 system system
     chmod 0660 /sys/bus/platform/devices/soc:fingerprint@0/shutdown
     chown system system /sys/bus/platform/devices/soc:fingerprint@0/shutdown
-    start fingerprintd
 
 on property:sys.listeners.registered=true
     start vfmService
