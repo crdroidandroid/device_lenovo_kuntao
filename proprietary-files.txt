@@ -814,7 +814,6 @@ etc/firmware/tas2555_uCDSP.bin
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|08853164bffe2b34aa26e6d2a6a0accdca5fd2fd
 -app/datastatusnotification/datastatusnotification.apk|d17de48b369ef4de4f513c6e2f4239f65496dc51
 -app/shutdownlistener/shutdownlistener.apk|343fc7da8b550d2b25924192d11684a680461376
--app/fastdormancy/fastdormancy.apk|f439081721e580d37984a7c03c53055e362a0542
 bin/port-bridge
 bin/netmgrd
 bin/qmi_motext_hook
