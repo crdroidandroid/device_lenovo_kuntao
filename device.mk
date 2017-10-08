@@ -212,7 +212,7 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.0-impl \
+    android.hardware.nfc@1.0-impl-bcm \
     libnfc \
     libnfc_jni \
     nfc_nci.msm8953 \
