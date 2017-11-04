@@ -415,7 +415,6 @@ vendor/lib64/libperipheral_client.so
 -framework/com.qti.snapdragon.sdk.display.jar|e6387246d96376fd832fdcf14b65e149b6333bb2
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 -vendor/app/colorservice/colorservice.apk|ec71d604220c9e0e1d481f7c66fd3bacdea82331
--etc/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml
 vendor/bin/mm-pp-dpps
 vendor/lib/libdisp-aba.so
 vendor/lib64/libdisp-aba.so
