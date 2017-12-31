@@ -102,6 +102,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     gralloc.msm8953 \
     hwcomposer.msm8953 \
+    copybit.msm8953 \
     liboverlay \
     libgenlock \
     memtrack.msm8953
@@ -234,7 +235,8 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
+    libjson \
+    libtinyxml
 
 # Ramdisk
 PRODUCT_PACKAGES += \
