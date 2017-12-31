@@ -84,37 +84,65 @@ etc/firmware/rampatch_tlv.img
 bin/hvdcp_opti
 
 # CNE
-bin/cnd|3e4c0dc77940f42e6d051e9bbb168747aadb9249
-etc/cne/andsfCne.xml
-etc/cne/SwimConfig.xml
-etc/cne/wqeclient/ATT/ATT_profile1.xml
-etc/cne/wqeclient/ATT/ATT_profile2.xml
-etc/cne/wqeclient/ATT/ATT_profile3.xml
-etc/cne/wqeclient/ATT/ATT_profile4.xml
-etc/cne/wqeclient/ROW/ROW_profile1.xml
-etc/cne/wqeclient/ROW/ROW_profile2.xml
-etc/cne/wqeclient/ROW/ROW_profile3.xml
-etc/cne/wqeclient/ROW/ROW_profile4.xml
-etc/cne/wqeclient/ROW/ROW_profile5.xml
-etc/cne/wqeclient/VZW/VZW_profile1.xml
-etc/cne/wqeclient/VZW/VZW_profile2.xml
-etc/cne/wqeclient/VZW/VZW_profile3.xml
-etc/cne/wqeclient/VZW/VZW_profile4.xml
-etc/cne/wqeclient/VZW/VZW_profile5.xml
-etc/cne/wqeclient/VZW/VZW_profile6.xml
-etc/permissions/ConnectivityExt.xml
+etc/cne/andsfCne.xml|f81a69eac5dd16bbb195a0fcf1211a51cc014553
+etc/cne/SwimConfig.xml|68dedcca1c2ac18cf81fdee1854de16a3a60dd02
+etc/cne/wqeclient/profile1.xml|0beeafc275af27165a051b77ad9ca7df03769dae
+etc/cne/wqeclient/profile2.xml|134faffe21b0fbeecc0de645cf42ac05502788f7
+etc/cne/wqeclient/profile3.xml|fc0767caa560c1bbc57059938d0ccfd5a787a392
+etc/cne/wqeclient/profile4.xml|bc264a891fd63e7c3889214d313655804d07e0b0
+etc/cne/wqeclient/profile5.xml|ad9e1580db2b8b37727227f2c3c1e95fda75b14a
+etc/cne/wqeclient/profile6.xml|8bb48716fa296c3a2b28e0c94b602bf3b599417a
+etc/cne/wqeclient/profile7.xml|190590ae34ed9ed13256e1d31ed1632df186393f
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
--framework/ConnectivityExt.jar|67025d09bbc7bb87bca1d15ab9c133eeb1ef2b9d
--framework/cneapiclient.jar|3cb56a579341acfb16d2be2e41bac2c7b6ac34b4
-vendor/lib/libcneqmiutils.so
-vendor/lib/libvendorconn.so
-vendor/lib/libwqe.so
-vendor/lib64/libcne.so|42041d7c8e4c50d5e43e7aeadac0d3c0d1c93e4c
-vendor/lib64/libcneapiclient.so|ec64d9ed8e2630491c64ab6fc554569e51ce213a
-vendor/lib64/libcneqmiutils.so
-vendor/lib64/libvendorconn.so
-vendor/lib64/libwqe.so
+framework/cneapiclient.jar|927aaee2dccdc7664b54cb3ef9d27a05bf7ae29c
+framework/com.quicinc.cne.api-V1.0-java.jar|6fb1bf2ea642ce0f0c8c4716639cab7a9810cc3e
+framework/com.quicinc.cne.jar|88fc21cd7dd69ae37607a9a671d4913d82c2e336
+lib/libvendorconn.so|e977087831555e810eabe111ca31185056d6d376
+lib64/libvendorconn.so|44214c679e127d6623b915f14dc2c937e8fd832d
+-priv-app/CNEService/CNEService.apk|5d4743300fbf77ab72b2dcd05dbb233c2d9efd65
+vendor/bin/cnd|fc7ad0d8041e35df029531ad6b5e972fdbfbfbc3
+vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|f2c06b51ee8894dc8abd50488f2b21c70f4c787b
+vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|af693cbaed9504d298bf6e99e126ec2790a3b811
+vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml|af33c7087d8ad3420925d2cf54e52da72ff11a0d
+vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml|5cedb17524be2ff258e390bc4559221ecd959a52
+vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml|8074142303296fc9925be3185c9c674e45deba5d
+vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml|f40f75ed0bb5bb77d3de318da52849550963453c
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml|0beeafc275af27165a051b77ad9ca7df03769dae
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml|134faffe21b0fbeecc0de645cf42ac05502788f7
+vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml|fc0767caa560c1bbc57059938d0ccfd5a787a392
+vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml|bc264a891fd63e7c3889214d313655804d07e0b0
+vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml|ad9e1580db2b8b37727227f2c3c1e95fda75b14a
+vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml|8bb48716fa296c3a2b28e0c94b602bf3b599417a
+vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml|190590ae34ed9ed13256e1d31ed1632df186393f
+vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml|7303f03bf46aef070d3f65994b3076f578918f67
+vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml|5611d6816d7f6620913ee7a3e44adab14c6ce77b
+vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml|f2c06b51ee8894dc8abd50488f2b21c70f4c787b
+vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|3bfb45f046f38154f392a17f779430f7c152bc71
+vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|af33c7087d8ad3420925d2cf54e52da72ff11a0d
+vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|253325234d7b8078e4045319269a13fa07c1515c
+vendor/lib/com.quicinc.cne.api@1.0.so|60dd6f1fa0c70523f91342b07be6c82e733cdb90
+vendor/lib/com.quicinc.cne.constants@1.0.so|0d3b2fd95e8ea3525467d8ca38865ac2a9d3f4c7
+vendor/lib/com.quicinc.cne.constants@2.0.so|0f5cdca41024ece0b3c7006113e4f11c5b00b9c3
+vendor/lib/com.quicinc.cne.server@1.0.so|e9c404ca3e334302b5460ff6a1622d14e2bc9ecb
+vendor/lib/com.quicinc.cne.server@2.0.so|06d77854508310873a7179d33992df403d92d5b6
+vendor/lib/libcne.so|029ae86dcaeff004bcf0548d2bd5a7aed2229915
+vendor/lib/libcneapiclient.so|f97d23653b7ed72694800eb45cd5a78663e17c45
+vendor/lib/libcneoplookup.so|716ce281cfe53a06404023476f3190d3f28461ad
+vendor/lib/libcneqmiutils.so|c26f228cbe2cce4f66d4510646815041205a67f4
+vendor/lib/libwqe.so|822420ff564e63da07ea841d408655338e0ad51a
+vendor/lib/libxml.so|288082cac5396bdb5e10f2014d99972f9e43e65c
+vendor/lib64/com.quicinc.cne.api@1.0.so|503825cc8a3c0d422e16e04b398d2c1924e518ca
+vendor/lib64/com.quicinc.cne.constants@1.0.so|a60fde6f9328635bf43bb7008dd9517e4e749e8b
+vendor/lib64/com.quicinc.cne.constants@2.0.so|3c5682f16cfe136766c5ccba7f5d340c915b634f
+vendor/lib64/com.quicinc.cne.server@1.0.so|97c3c68a96551d8d2b40b72ceba06f28af0d6ebe
+vendor/lib64/com.quicinc.cne.server@2.0.so|d424a848622f4d8e55b8e6a2d7e540e4a9affa03
+vendor/lib64/libcne.so|edcd7d8f33a86082ef9890d28a9c4bb75185a3ab
+vendor/lib64/libcneapiclient.so|33e7465996749a8823ac03e34a94e3112c88dda4
+vendor/lib64/libcneoplookup.so|f2213d133a9c94a2a80efd96d28f2f27aa05d51c
+vendor/lib64/libcneqmiutils.so|cb3be84604839067bc474bb271639df7d3bf0d31
+vendor/lib64/libwqe.so|0ca87bc277c645fea7dbfd50504f7a6097c08d98
+vendor/lib64/libxml.so|b966ad575b2078dd09a0e5fdc2fb428a1ffe31fc
 
 # DRM
 bin/qseecomd
@@ -271,40 +299,31 @@ vendor/lib/libhdr_tm.so|83ca1c47ccd215baca614e4d84cd3831485e14b5
 vendor/lib64/libhdr_tm.so|ceeef82175e2785b527c215f25020ea01c371810
 
 # IMS
-bin/ims_rtp_daemon|d5ed9cfbd0dd9f7d1abb7f8c9191760432af2985
-bin/imscmservice|f5ce2fb129e099c05cddec0702403ac6154550c5
-bin/imsdatadaemon|51b106a5a4ee93e7d7b9f769d0dc11b1ec2fab65
-bin/imsqmidaemon|befafd569749f93595f77713df0dec2321429d19
-etc/permissions/imscm.xml
-etc/permissions/qti-vzw-ims-internal.xml
--framework/imscmlibrary.jar|0c24d6540c06efede52169c1445272f43748180f
--framework/rcsimssettings.jar|566a0f637344ca3182aca33753e404977fc77ecc
--vendor/app/ims/ims.apk|61f311759fd87b62e320c72d3917594d927e3373
--vendor/app/imssettings/imssettings.apk|84bdb8fec5f623d9d7030edfccc35bdfc7b0914f
-vendor/framework/qti-vzw-ims-internal.jar|7e945cb593192f65cfc2075c8c09f6c8eac608b1
-vendor/lib64/lib-dplmedia.so|08cc356e607834cea11a85d704eede3ebe4f2aa4
-vendor/lib64/lib-ims-rcscmjni.so|e61f46cd34da10ec7c20bbc281186e8f77f8504d
-vendor/lib64/lib-imscamera.so|aab9348362ef95553bd38eef2a6d58f68f26ba52
-vendor/lib64/lib-imsdpl.so|fd29d244f0e82078f5651d939d7cb98e8a4cab1d
-vendor/lib64/lib-imsqimf.so|ec5b3559556f238d1f2f20196003d2f2af878c85
-vendor/lib64/lib-imsrcs.so|0ef51d725b3c8f814c9a025c2547a5829fd82857
-vendor/lib64/lib-imsrcscm.so|13667566310101b639f77bda78913d073dd97588
-vendor/lib64/lib-imsrcscmclient.so|7a7f7b601236204c35438cfa9de33d9591bf293a
-vendor/lib64/lib-imsrcscmservice.so|078995442998a58d3bd7b0b2bfe8fd6abbe1f744
-vendor/lib64/lib-imss.so|039f45c38aa0dd76a65b2aa35af179166a1b5026
-vendor/lib64/lib-imsSDP.so|9713d46c374b0b11dcb5a6fbb270facca49c23ad
-vendor/lib64/lib-imsvt.so|6cb38d8cc1fd5601a0db8a49fc2a7924fd45f171
-vendor/lib64/lib-imsxml.so|c023d1afca2c4d5551afc9a9fe749f0eecc08860
-vendor/lib64/lib-rcsimssjni.so|8e78513a3ad4d9bcfbde73481c777bbb51f743c2
-vendor/lib64/lib-rcsjni.so|1970461b0e5d5e3d2bfb84eea3ef2930107ff960
-vendor/lib64/lib-rtpcommon.so|ecc31f93f682908e8d4ba41664da5737d8065d40
-vendor/lib64/lib-rtpcore.so|aa64cf95bf2c82dcc09a97566b8d8b909650bbc1
-vendor/lib64/lib-rtpdaemoninterface.so|cc7dd1271967297158ab7efe3eb7400766c8bc08
-vendor/lib64/lib-rtpsl.so|2cfc03cc700e9517bb07cdfedf0f7037021c3a36
-vendor/lib64/libimscamera_jni.so|56dc79a37353f5cd7b51411a7e0e7640a93eb4b5
-vendor/lib64/libimsmedia_jni.so|e878e03387d5497610ae031b4ecc974318dfbb7b
-vendor/lib64/librcc.so|2f95ca3a5f6bd1bb94434918bad581cd35d80f1d
-vendor/lib64/libvoice-svc.so|259b062f54baabc9045dce02cc25263acd1436cd
+-app/ims/ims.apk|82664151cd00c90a0d414b01be8acd390a7ccf54
+-app/imssettings/imssettings.apk|57e06727c13dbdfd37e78135e944bf78e97d6495
+vendor/bin/ims_rtp_daemon|56c94c6987090681ab16e2baa8dd5026a6abb489
+vendor/bin/imsdatadaemon|7860a86666bb33b245c09b309fe97d74a4db1cc0
+vendor/bin/imsqmidaemon|481cdfd2a24cfeb8b4e6309559b7c3c728051230
+lib64/lib-imscamera.so|3401ced0e6c0862103fdc2a60a78e67fc2ae30e1
+lib64/lib-imsvideocodec.so|8973da19b2ed6486936b1b99992a161bc0550651
+lib64/lib-imsvt.so|232e3db68c2356986d3a3171f6db35b5c7d3ee0d
+lib64/lib-imsvtextutils.so|3653bbde9d6a9df4dc9d4a70d5b97a93670468dc
+lib64/lib-imsvtutils.so|b938bd29e160af9928cf07c576a4e5cfb74f1338
+lib64/libimscamera_jni.so|bbbad052ad9b7cfdde9a585d9aa92f9fd289967a
+lib64/libimsmedia_jni.so|1a33694897edf11dbc95ed5fd4fd233b4bc667dd
+lib64/librcc.so|72ac985398880fc675420396831a09d01214c580
+lib64/vendor.qti.imsrtpservice@1.0.so|2b120afe5f2464beeeba021d2665ea32ac2351ef
+vendor/lib64/lib-dplmedia.so|954015168b9e0fc868f33c8e5796280a0aea6944
+vendor/lib64/lib-imsdpl.so|acf765f5b88127ce79460df07750f8455c950ea4
+vendor/lib64/lib-imsqimf.so|709432ecbb26bfa052dcdb8002d0596b68e97c35
+vendor/lib64/lib-imsSDP.so|855f601a3ffa76699a8ca13cc9a522157f7a837a
+vendor/lib64/lib-rtpcommon.so|690779e0012b95bd6a2ad4158961678359fceef9
+vendor/lib64/lib-rtpcore.so|5e8e8508cc2b3b7ebc98b0c0d09509c8f7f77b91
+vendor/lib64/lib-rtpdaemoninterface.so|dd8fd5cf42e8b6cfc7c19db7f8595948795d1d90
+vendor/lib64/lib-rtpsl.so|edcef7a9d3533f7d97e848dbd9333664307c4452
+vendor/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so|33730488b6e959850ccfca5a0f8c11a8231981b5
+vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so|4be12c31e8f2486d267f5c32fbcd045e4959fcac
+vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|18744c66424ae0ef6993ff33d9179ea97fd0ae47
 
 # IPA
 bin/ipacm-diag
@@ -362,8 +381,8 @@ vendor/lib64/libmmsw_opencl.so
 vendor/lib64/libmmsw_platform.so
 
 # Modem
-vendor/lib/libwms.so
-vendor/lib64/libwms.so
+vendor/lib/libwms.so|b1649096765603cca71b23d52315b63165943eb9
+vendor/lib64/libwms.so|e22c39c3d87227904cc3c3208880cbf49653a78a
 
 # Network
 vendor/lib/libQtiTether.so
@@ -477,7 +496,6 @@ vendor/lib/libsystem_health_mon.so
 vendor/lib/librilqmiservices.so
 vendor/lib/libsubsystem_control.so
 vendor/lib/libSubSystemShutdown.so
-vendor/lib/libxml.so
 lib64/libqmimotext.so
 lib64/libmotext_inf.so
 vendor/lib64/libconfigdb.so
@@ -490,10 +508,9 @@ vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/librilqmiservices.so
-vendor/lib64/libsettings.so|2910b9d71c9b6156fc6048046436567daafd39a4
+vendor/lib64/libsettings.so|3e459839d90a27d2eb23a3c9d030f46a5c4bfaf1
 vendor/lib64/libsubsystem_control.so
 vendor/lib64/libSubSystemShutdown.so
-vendor/lib64/libxml.so
 lib64/libtzssm.so
 
 # SCVE
