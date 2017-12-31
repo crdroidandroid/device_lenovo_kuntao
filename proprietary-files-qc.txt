@@ -255,6 +255,7 @@ vendor/lib/libsdm-color.so|4f6a780f4ea0a857163d524c406b3769fd3aa8fa
 vendor/lib/libsdm-diag.so|e19191d72fc9f085189ccb9ad111b38142cc2bb1
 vendor/lib/libsdm-disp-vndapis.so|ea3bebdbede24d844f5ea0073220c02ada8dbf68
 vendor/lib/libsdmextension.so|199ab784d82d9ab564be31a48f0e4c06513f92ed
+vendor/lib/libtinyxml2_1.so|fddc48298389f15337c65a1b1fa3361925fa937e
 vendor/lib64/egl/eglSubDriverAndroid.so|89c4948bc4519c9d6744f820afaa010f7556dfac
 vendor/lib64/egl/libEGL_adreno.so|02d3343c7bad717a757c22303d2cdb54f493da15
 vendor/lib64/egl/libGLESv1_CM_adreno.so|f82b3e4b5b13258654957328b7b8ad6a55270718
@@ -285,6 +286,7 @@ vendor/lib64/libsdm-color.so|4a6eee4f8adc47af462bbcb7eaac8d4b6e7cd0b9
 vendor/lib64/libsdm-diag.so|308bcb24fdcfab4db5ce90ffe2cb5ad897b5a6b7
 vendor/lib64/libsdm-disp-vndapis.so|1ef8e31c053fdd05a33b33e0ed39319a96c676a9
 vendor/lib64/libsdmextension.so|8bc13794d404ea0c66924c45d2e28895ecf48728
+vendor/lib64/libtinyxml2_1.so|eb4cd93e051980b8b35f5eeebd3d980e033cb87f
 
 # Graphics - HDR
 vendor/lib/libhdr_tm.so|83ca1c47ccd215baca614e4d84cd3831485e14b5
