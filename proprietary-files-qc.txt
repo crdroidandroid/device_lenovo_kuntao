@@ -116,28 +116,6 @@ vendor/lib64/libcneqmiutils.so
 vendor/lib64/libvendorconn.so
 vendor/lib64/libwqe.so
 
-# DPM
-bin/dpmd
-etc/dpm/dpm.conf
-etc/dpm/nsrm/NsrmConfiguration.xml
-etc/permissions/com.qti.dpmframework.xml
-etc/permissions/dpmapi.xml
--framework/com.qti.dpmframework.jar|7d855e9cf5d10cd88cdcd9c9bd16120afcaa7e72
--framework/dpmapi.jar|0015235ff71d52d1b340b10ce4fa737fa26975ef
--framework/tcmclient.jar|e7149c664f4b1841139ab816c0d4e0942df0583c
-vendor/lib/libdpmctmgr.so
-vendor/lib/libdpmfdmgr.so
-vendor/lib/libdpmframework.so
-vendor/lib/libdpmnsrm.so
-vendor/lib/libdpmtcm.so
-vendor/lib64/libdpmctmgr.so
-vendor/lib64/libdpmfdmgr.so
-vendor/lib64/libdpmframework.so
-vendor/lib64/libdpmnsrm.so
-vendor/lib64/libdpmtcm.so
-vendor/lib64/libprotobuf-cpp-derp.so|634986ec0d4112a0aeab5d8854451df0e1a145a6
-vendor/lib64/libprotobuf-cpp-shit.so|061bbc3179b512c349c3541a1a07ff53cafb40b8
-
 # DRM
 bin/qseecomd
 vendor/bin/qseeproxydaemon
