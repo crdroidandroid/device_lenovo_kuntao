@@ -1,7 +1,7 @@
 # Audio
-lib/hw/audio.primary.msm8953.so
+lib/hw/audio.primary.msm8953.so:vendor/lib/hw/audio.primary.msm8953.so
 lib/libtinycompress.so|c719f104aa0688129251429a5a1d079021a4be62
-lib64/hw/audio.primary.msm8953.so
+lib64/hw/audio.primary.msm8953.so:vendor/lib64/hw/audio.primary.msm8953.so
 lib64/libtinycompress.so|020b96b4bc3ad4554e10cbc31d545565a690975f
 vendor/lib/hw/sound_trigger.primary.msm8953.so
 vendor/etc/audio_output_policy.conf
