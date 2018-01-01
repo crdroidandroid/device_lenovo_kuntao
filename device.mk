@@ -213,6 +213,12 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Netutils
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.0 \
+    libandroid_net \
+    netutils-wrapper-1.0
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl-bcm \
@@ -258,9 +264,13 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0-impl \
     libcnefeatureconfig \
     librmnetctl \
     libxml2
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # USB HAL
 PRODUCT_PACKAGES += \
