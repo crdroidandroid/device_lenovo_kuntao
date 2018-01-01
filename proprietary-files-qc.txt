@@ -301,29 +301,39 @@ vendor/lib64/libhdr_tm.so|ceeef82175e2785b527c215f25020ea01c371810
 # IMS
 -app/ims/ims.apk|82664151cd00c90a0d414b01be8acd390a7ccf54
 -app/imssettings/imssettings.apk|57e06727c13dbdfd37e78135e944bf78e97d6495
+etc/permissions/qti-vzw-ims-internal.xml|da39a3ee5e6b4b0d3255bfef95601890afd80709
 vendor/bin/ims_rtp_daemon|56c94c6987090681ab16e2baa8dd5026a6abb489
 vendor/bin/imsdatadaemon|7860a86666bb33b245c09b309fe97d74a4db1cc0
 vendor/bin/imsqmidaemon|481cdfd2a24cfeb8b4e6309559b7c3c728051230
+vendor/bin/imsrcsd|40c6695f00cab9aebb4607224e61e16acc9bc6f1
+vendor/framework/qti-vzw-ims-internal.jar|9f0c22b5b7617b3d40985a9c01b760fe19947012
+lib/libqdMetaData.system.so|56098a69df825f1cd7f1e0351ecdd8eb51658667
 lib64/lib-imscamera.so|3401ced0e6c0862103fdc2a60a78e67fc2ae30e1
 lib64/lib-imsvideocodec.so|8973da19b2ed6486936b1b99992a161bc0550651
 lib64/lib-imsvt.so|232e3db68c2356986d3a3171f6db35b5c7d3ee0d
 lib64/lib-imsvtextutils.so|3653bbde9d6a9df4dc9d4a70d5b97a93670468dc
 lib64/lib-imsvtutils.so|b938bd29e160af9928cf07c576a4e5cfb74f1338
+lib64/libdiag_system.so|70c389d1730e69b8be5168143133db14e087fd45
 lib64/libimscamera_jni.so|bbbad052ad9b7cfdde9a585d9aa92f9fd289967a
 lib64/libimsmedia_jni.so|1a33694897edf11dbc95ed5fd4fd233b4bc667dd
 lib64/librcc.so|72ac985398880fc675420396831a09d01214c580
 lib64/vendor.qti.imsrtpservice@1.0.so|2b120afe5f2464beeeba021d2665ea32ac2351ef
+lib64/com.qualcomm.qti.imscmservice@1.0.so|af44a8726cc3e68c4d6f413a64721682540193de
 vendor/lib64/lib-dplmedia.so|954015168b9e0fc868f33c8e5796280a0aea6944
 vendor/lib64/lib-imsdpl.so|acf765f5b88127ce79460df07750f8455c950ea4
 vendor/lib64/lib-imsqimf.so|709432ecbb26bfa052dcdb8002d0596b68e97c35
 vendor/lib64/lib-imsSDP.so|855f601a3ffa76699a8ca13cc9a522157f7a837a
+vendor/lib64/lib-imscmservice.so|a75779e63349169997cb99dba4e69d59840e44dd
+vendor/lib64/lib-imsxml.so|5ee2a918964f64ef7dd84f39698b6a3141393509
 vendor/lib64/lib-rtpcommon.so|690779e0012b95bd6a2ad4158961678359fceef9
 vendor/lib64/lib-rtpcore.so|5e8e8508cc2b3b7ebc98b0c0d09509c8f7f77b91
 vendor/lib64/lib-rtpdaemoninterface.so|dd8fd5cf42e8b6cfc7c19db7f8595948795d1d90
 vendor/lib64/lib-rtpsl.so|edcef7a9d3533f7d97e848dbd9333664307c4452
+vendor/lib64/lib-uceservice.so|c22316bee5e5d846c3345bfea3737a562f068ed4
 vendor/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so|33730488b6e959850ccfca5a0f8c11a8231981b5
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so|4be12c31e8f2486d267f5c32fbcd045e4959fcac
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|18744c66424ae0ef6993ff33d9179ea97fd0ae47
+vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so|02ba00247b46fb79ee8c936f7bc709d11d456f40
 
 # IPA
 bin/ipacm-diag
