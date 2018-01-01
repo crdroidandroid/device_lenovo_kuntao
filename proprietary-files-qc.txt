@@ -463,8 +463,8 @@ etc/firmware/leia_pm4_470.fw
 etc/firmware/tas2555_uCDSP.bin
 
 # Radio
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|08853164bffe2b34aa26e6d2a6a0accdca5fd2fd
--app/datastatusnotification/datastatusnotification.apk|d17de48b369ef4de4f513c6e2f4239f65496dc51
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|2e105960cb73c1b480b3f87295200eeee5774d4e
+-app/datastatusnotification/datastatusnotification.apk|deb8d063001a59b68c63c19bb437354d4396fe4b
 -app/shutdownlistener/shutdownlistener.apk|343fc7da8b550d2b25924192d11684a680461376
 bin/port-bridge
 bin/netmgrd
@@ -478,9 +478,9 @@ etc/data/netmgr_config.xml
 etc/permissions/embms.xml
 etc/permissions/telephonyservice.xml
 etc/data/dsi_config.xml
--framework/embmslibrary.jar|a06799495515305de3e5d432ec62a1f692200c99
--framework/qcrilhook.jar|ba5266e9a3e9c6f24985bf461871609d472c5dac
--framework/qcnvitems.jar|24494a8f1aaa969282dc217fb71f05af5efa1336
+-framework/embmslibrary.jar|1da4b9785e0a08d1266ebb91d5224567c09f5361
+-framework/qcrilhook.jar|ac55cd6a53d9c2e6c9537a86215efc7bdb12099a
+-framework/qcnvitems.jar|1ddb327e1a0afa103024f123ac618e6b89f9044d
 vendor/qcril.db
 lib/libmotext_inf.so
 vendor/bin/qti
