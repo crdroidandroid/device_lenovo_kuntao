@@ -178,6 +178,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
 
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common
+
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
