@@ -64,9 +64,9 @@ etc/drc/drc_cfg_5.1.txt
 etc/drc/drc_cfg_AZ.txt
 
 # Bluetooth
-bin/btnvtool
-bin/hci_qcomm_init
-bin/wcnss_filter
+bin/btnvtool:vendor/bin/btnvtool
+bin/hci_qcomm_init:vendor/bin/hci_qcomm_init
+bin/wcnss_filter:vendor/bin/wcnss_filter
 
 # Bluetooth firmware
 etc/firmware/nvm_tlv_1.3.bin
@@ -145,7 +145,7 @@ vendor/lib64/libwqe.so|0ca87bc277c645fea7dbfd50504f7a6097c08d98
 vendor/lib64/libxml.so|b966ad575b2078dd09a0e5fdc2fb428a1ffe31fc
 
 # DRM
-bin/qseecomd
+bin/qseecomd:vendor/bin/qseecomd
 vendor/bin/qseeproxydaemon
 vendor/lib/libcppf.so
 vendor/lib/libdrmfs.so
@@ -336,7 +336,7 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|18744c66424ae0ef6993ff
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so|02ba00247b46fb79ee8c936f7bc709d11d456f40
 
 # IPA
-bin/ipacm-diag
+bin/ipacm-diag:vendor/bin/ipacm-diag
 
 # keymaster
 vendor/lib/hw/keystore.msm8953.so
@@ -401,8 +401,8 @@ vendor/lib64/libQtiTether.so
 vendor/lib64/libconnctrl.so
 
 # Perf
-bin/energy-awareness
-bin/msm_irqbalance
+bin/energy-awareness:vendor/bin/energy-awareness
+bin/msm_irqbalance:vendor/bin/msm_irqbalance
 vendor/bin/perfd
 vendor/etc/msm_irqbalance.conf
 vendor/lib/libqti-iop.so
@@ -415,8 +415,8 @@ vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti_performance.so
 
 # Peripheral manager
-bin/pm-service
-bin/pm-proxy
+bin/pm-service:vendor/bin/pm-service
+bin/pm-proxy:vendor/bin/pm-proxy
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
@@ -426,7 +426,7 @@ vendor/lib/libdisp-aba.so
 vendor/lib64/libdisp-aba.so
 
 # QMI
-bin/irsc_util
+bin/irsc_util:vendor/bin/irsc_util
 etc/permissions/qti_permissions.xml
 lib/libQseeOptService.so
 vendor/lib/libdiag.so
@@ -570,7 +570,7 @@ vendor/lib64/libscveTextRecoPostProcessing.so
 vendor/lib64/libscveTextReco_stub.so
 
 # Sensorhub
-bin/sensors.qcom
+bin/sensors.qcom:vendor/bin/sensors.qcom
 lib/hw/sensors.msm8953.so
 vendor/lib/hw/activity_recognition.msm8953.so
 vendor/lib/sensors.alsps.so
@@ -618,6 +618,6 @@ vendor/lib/libwvdrm_L3.so
 vendor/lib/libWVStreamControlAPI_L3.so
 
 # WiFi
-bin/cnss-daemon
-bin/cnss_diag
-bin/wcnss_service
+bin/cnss-daemon:vendor/bin/cnss-daemon
+bin/cnss_diag:vendor/bin/cnss_diag
+bin/wcnss_service:vendor/bin/wcnss_service

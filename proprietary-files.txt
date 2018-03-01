@@ -60,7 +60,7 @@ etc/acdbdata/QRD/QRD_Headset_cal.acdb
 etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 
 # Camera
-bin/mm-qcamera-daemon
+bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 vendor/lib/libfastcvopt.so
 vendor/lib/libmmipl.so
 lib/hw/camera.msm8953.so
@@ -302,13 +302,13 @@ etc/firmware/cpp_firmware_v1_4_0.fw
 etc/firmware/emmc_ffu_15_RX14MB.fw
 
 # Fastcharger
-bin/smart_charger
+bin/smart_charger:vendor/bin/smart_charger
 
 # Fingerprint
-bin/vfmAPITest
-bin/vfmService
-bin/vfmExTest
-bin/synaFpTestHalTest
+bin/vfmAPITest:vendor/bin/vfmAPITest
+bin/vfmService:vendor/bin/vfmService
+bin/vfmExTest:vendor/bin/vfmExTest
+bin/synaFpTestHalTest:vendor/bin/synaFpTestHalTest
 lib/libvcsfp.so
 lib/libsynaFpTestHal.so
 lib/libvfmClient.so
