@@ -1200,6 +1200,7 @@ on property:vendor.ims.DATA_DAEMON_STATUS=1
 service rmt_storage /system/bin/rmt_storage
     class core
     user root
+    shutdown critical
 
 service tftp_server /system/bin/tftp_server
    class core
