@@ -151,6 +151,7 @@ persist.radio.custom_ecc=1
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
+persist.radio.aosp_usr_pref_sel=true
 
 # WiFi
 wifi.interface=wlan0
