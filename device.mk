@@ -87,9 +87,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap \
     camera.msm8953 \
+    libmm-qcamera \
     libshim_camera \
     camera.device@3.2-impl \
-    android.hardware.camera.provider@2.4-impl
+    camera.device@1.0-impl \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.camera.device@1.0_vendor \
+    android.hardware.camera.provider@2.4-impl 
 
 # Display
 PRODUCT_PACKAGES += \
