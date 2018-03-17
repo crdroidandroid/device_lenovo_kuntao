@@ -378,6 +378,10 @@ etc/firmware/hbtp/qtc800s_dsp.bin
 vendor/firmware/BCM20797B0_002.001.043.0005.0010_Generic_NCD_Unsigned_configdata.ncd
 etc/libnfc-brcm.conf
 etc/libnfc-brcm-20797b00.conf
+etc/nfc_wallet.conf
+etc/nfcee_access.xml
+etc/nfcse.cfg
+lib64/hw/nfc_nci.bcm2079x.default.so
 
 # TAS
 lib/libTAS2555ftc.so
