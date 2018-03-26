@@ -92,11 +92,6 @@ TARGET_TS_MAKEUP := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 
-# CMHW
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw
-
 # CNE | DPM
 BOARD_USES_QCNE := true
 
@@ -148,6 +143,10 @@ TARGET_KERNEL_CONFIG := p2a42_defconfig
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
+
+# Lineage Hardware
+BOARD_HARDWARE_CLASS += \
+    device/lenovo/kuntao/lineagehw
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
