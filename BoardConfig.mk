@@ -207,6 +207,9 @@ TARGET_RIL_VARIANT := caf
 #BOARD_SEPOLICY_DIRS += device/lenovo/kuntao/sepolicy
 #include device/qcom/sepolicy/sepolicy.mk
 
+# Tap-to-Wake
+TARGET_TAP_TO_WAKE_NODE := "/sys/board_properties/tpd_suspend_status"
+
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
