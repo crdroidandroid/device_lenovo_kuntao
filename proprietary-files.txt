@@ -6,7 +6,7 @@ lib64/libtinycompress.so|020b96b4bc3ad4554e10cbc31d545565a690975f
 vendor/lib/hw/sound_trigger.primary.msm8953.so
 vendor/etc/audio_output_policy.conf
 etc/speaker.ftcfg
-etc/mixer_paths_mtp.xml
+etc/mixer_paths_mtp.xml|92b04ee156d83ab063dcba104a77872793a69d72
 etc/mixer_paths.xml
 etc/mixer_paths_skuk.xml
 etc/a2dp_audio_policy_configuration.xml
