@@ -122,10 +122,10 @@ PRODUCT_PACKAGES += \
 
 # Display Calibration
 PRODUCT_PACKAGES += \
-    libjni_livedisplay
+    vendor.lineage.livedisplay@1.0-service-sdm
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml:system/etc/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml
+    $(LOCAL_PATH)/configs/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml
 
 # Doze mode
 PRODUCT_PACKAGES += \
