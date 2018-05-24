@@ -181,6 +181,7 @@ TARGET_PER_MGR_ENABLED := true
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
+TARGET_TAP_TO_WAKE_NODE := "/sys/board_properties/tpd_suspend_status"
 
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
@@ -205,9 +206,6 @@ TARGET_RIL_VARIANT := caf
 # SELinux
 BOARD_SEPOLICY_DIRS += device/lenovo/kuntao/sepolicy
 include device/qcom/sepolicy/sepolicy.mk
-
-# Tap-to-Wake
-TARGET_TAP_TO_WAKE_NODE := "/sys/board_properties/tpd_suspend_status"
 
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
