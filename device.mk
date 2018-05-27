@@ -62,7 +62,7 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
-    libaudio-resampler \
+    libaudio-resampler
 
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
@@ -130,6 +130,10 @@ PRODUCT_COPY_FILES += \
 # Doze mode
 PRODUCT_PACKAGES += \
     XiaomiDoze
+
+# TextClassifier smart selection model files
+PRODUCT_PACKAGES += \
+    textclassifier.smartselection.bundle1
 
 # DRM
 PRODUCT_PACKAGES += \
