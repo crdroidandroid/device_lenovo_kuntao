@@ -55,6 +55,7 @@ vidc.dec.downscalar_height=1088
 vidc.dec.disable.split.cpu=1
 vidc.enc.disable_bframes=1
 vidc.enc.disable_pframes=1
+vidc.enc.narrow.searchrange=1
 vidc.enc.dcvs.extra-buff-count=2
 camera.lowpower.record.enable=1
 persist.camera.HAL3.enabled=1
@@ -80,8 +81,7 @@ ro.qualcomm.cabl=0
 ro.sf.lcd_density=480
 
 # DRM
-drm.service.enabled=1
-vidc.enc.narrow.searchrange=1
+drm.service.enabled=true
 
 # Factory reset protection
 ro.frp.pst=/dev/block/bootdevice/by-name/config
