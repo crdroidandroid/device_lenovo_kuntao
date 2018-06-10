@@ -278,11 +278,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service-qti
 
-# Power HAL
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl \
-    power.msm8953
-
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
