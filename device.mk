@@ -58,7 +58,6 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audiod \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
@@ -209,8 +208,7 @@ PRODUCT_PACKAGES += \
 
 # IPA Manager
 PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml
+    ipacm
 
 # Keylayout
 PRODUCT_COPY_FILES += \
