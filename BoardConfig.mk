@@ -180,7 +180,7 @@ BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 TARGET_PER_MGR_ENABLED := true
 
 # Power
-TARGET_POWERHAL_VARIANT := qcom
+TARGET_USES_INTERACTION_BOOST := true
 TARGET_TAP_TO_WAKE_NODE := "/sys/board_properties/tpd_suspend_status"
 
 # Enable real time lockscreen charging current values
