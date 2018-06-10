@@ -49,16 +49,8 @@ on init
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
 
-    # Create cgroup mount point for memory
-    mkdir /sys/fs/cgroup/memory/bg 0750 root system
-    write /sys/fs/cgroup/memory/bg/memory.swappiness 140
-    write /sys/fs/cgroup/memory/bg/memory.move_charge_at_immigrate 1
-    chown root system /sys/fs/cgroup/memory/bg/tasks
-    chmod 0660 /sys/fs/cgroup/memory/bg/tasks
-
     # Setup zram options
     write /sys/block/zram0/comp_algorithm lz4
-
     write /proc/sys/vm/page-cluster 0
 
 on fs
@@ -79,7 +71,6 @@ on early-boot
     setrlimit 8 67108864 67108864
     # Allow subsystem (modem etc) debugging
     write /sys/kernel/boot_adsp/boot 1
-    write /sys/kernel/boot_slpi/boot 1
 
 on boot
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -109,7 +100,7 @@ on boot
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
 
-    #Create QMUX deamon socket area
+    # Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
     mkdir /dev/socket/qmux_audio 0770 media audio
@@ -126,7 +117,7 @@ on boot
     mkdir /persist/time 0770 system system
     mkdir /persist/display 0770 system graphics
 
-    #Create NETMGR daemon socket area
+    # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
 
     # Prevents permission denied error for telephony
@@ -134,64 +125,40 @@ on boot
 
     setprop wifi.interface wlan0
 
-#   Define TCP buffer sizes for various networks
-#   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
-    setprop net.tcp.buffersize.wifi    524288,2097152,4194304,262144,524288,1048576
+    # Define TCP buffer sizes for various networks
+    # ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
+    setprop net.tcp.buffersize.wifi 524288,2097152,4194304,262144,524288,1048576
 
-    setprop ro.telephony.call_ring.multiple false
-
-    #enable camera read sensors data
+    # enable camera read sensors data
     setprop persist.camera.gyro.disable 0
 
-    #Remove SUID bit for iproute2 ip tool
+    # Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
 
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
-    #For bridgemgr daemon to inform the USB driver of the correct transport
+    # For bridgemgr daemon to inform the USB driver of the correct transport
     chown radio radio /sys/class/android_usb/f_rmnet_smd_sdio/transport
 
-#   Define TCP buffer sizes for various networks
-#   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
+    # Define TCP buffer sizes for various networks
+    # ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
     setprop net.tcp.buffersize.default 4096,87380,524288,4096,16384,110208
-    setprop net.tcp.buffersize.lte     2097152,4194304,8388608,262144,524288,1048576
-    setprop net.tcp.buffersize.umts    4094,87380,110208,4096,16384,110208
-    setprop net.tcp.buffersize.hspa    4094,87380,1220608,4096,16384,1220608
-    setprop net.tcp.buffersize.hsupa   4094,87380,1220608,4096,16384,1220608
-    setprop net.tcp.buffersize.hsdpa   4094,87380,1220608,4096,16384,1220608
-    setprop net.tcp.buffersize.hspap   4094,87380,1220608,4096,16384,1220608
-    setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
-    setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
-    setprop net.tcp.buffersize.evdo    4094,87380,524288,4096,16384,262144
+    setprop net.tcp.buffersize.lte 2097152,4194304,8388608,262144,524288,1048576
+    setprop net.tcp.buffersize.umts 4094,87380,110208,4096,16384,110208
+    setprop net.tcp.buffersize.hspa 4094,87380,1220608,4096,16384,1220608
+    setprop net.tcp.buffersize.hsupa 4094,87380,1220608,4096,16384,1220608
+    setprop net.tcp.buffersize.hsdpa 4094,87380,1220608,4096,16384,1220608
+    setprop net.tcp.buffersize.hspap 4094,87380,1220608,4096,16384,1220608
+    setprop net.tcp.buffersize.edge 4093,26280,35040,4096,16384,35040
+    setprop net.tcp.buffersize.gprs 4092,8760,11680,4096,8760,11680
+    setprop net.tcp.buffersize.evdo 4094,87380,524288,4096,16384,262144
 
     setprop net.tcp.2g_init_rwnd 10
 
-#   Assign TCP buffer thresholds to be ceiling value of technology maximums
-#   Increased technology maximums should be reflected here.
-    write /proc/sys/net/core/rmem_max  8388608
-    write /proc/sys/net/core/wmem_max  8388608
-
-    #To allow interfaces to get v6 address when tethering is enabled
-    write /proc/sys/net/ipv6/conf/rmnet0/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet1/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet2/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet3/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet4/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet5/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet6/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet7/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio0/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio1/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio2/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio3/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio4/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio5/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio6/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio7/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_usb0/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_usb1/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_usb2/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_usb3/accept_ra 2
+    # Assign TCP buffer thresholds to be ceiling value of technology maximums
+    # Increased technology maximums should be reflected here.
+    write /proc/sys/net/core/rmem_max 8388608
+    write /proc/sys/net/core/wmem_max 8388608
 
     # To prevent out of order acknowledgements from making
     # connection tracking to treat them as not belonging to
@@ -222,7 +189,7 @@ on boot
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
 
-# access permission for secure touch
+    # access permission for secure touch
     chmod 0660 /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch_enable
     chmod 0440 /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
     chmod 0660 /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
@@ -231,39 +198,37 @@ on boot
     chown system drmrpc /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
     chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
     chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
-#lenovo-sw weiweij added for file point access
+
+    # lenovo-sw weiweij added for file point access
     chown system system /sys/class/power_supply/ext-charger/otg_usb_short
     chmod 0666 /sys/class/power_supply/ext-charger/otg_usb_short
-#lenovo-sw weiweij added for file point access end
+    # lenovo-sw weiweij added for file point access end
 
-# access permission for rgb led
+    # access permission for rgb led
     chmod 0664	/sys/class/leds/rgb/brightness
     chown system system /sys/class/leds/rgb/brightness
     chown system system /sys/class/leds/rgb/blink
 
-# Change ownership for Dynamic-CABC feature
+    # Change ownership for Dynamic-CABC feature
     chown system system /sys/class/graphics/fb0/cabc_mode
-# Change ownership for for HBM feature
+    # Change ownership for for HBM feature
     chown system system /sys/class/graphics/fb0/hbm
-# Change ownership for for ACL feature
+    # Change ownership for for ACL feature
     chown system system /sys/class/graphics/fb0/acl_mode
-# Change ownership for for seed feature
+    # Change ownership for for seed feature
     chown system system /sys/class/graphics/fb0/color_profile
-
-    write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/fw_name PR1702898-s3528t_00260005_00380008.img
-    write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/update_fw 1
 
     # set RLIMIT_NICE to allow priorities from 19 to -20
     setrlimit 13 40 40
 
-#lenovo-sw wengjun1 add 20160504 begin
+    # lenovo-sw wengjun1 add 20160504 begin
     chown system system /sys/board_properties/tpd_glove_status
     chown system system /sys/board_properties/tpd_suspend_status
     chown system system /dev/rmi0
     chmod 0664 /sys/board_properties/tpd_suspend_status
     chmod 0664 /sys/board_properties/tpd_glove_status
     chmod 0660 /dev/rmi0
-#lenovo-sw wengjun1 add 20160504 end
+    # lenovo-sw wengjun1 add 20160504 end
     chmod 0755 /system/vendor/bin/vfmService
     chmod 0660 /dev/vfsspi
     chown system system /dev/vfsspi
@@ -294,7 +259,7 @@ on post-fs
     chmod 0660 /dev/iio:device6
     #/dev/iio:device* 0660 system systema
 
-    #common sensors files
+    # common sensors files
     chown system system /sys/devices/iio:device0/buffer/enable
     chown system system /sys/devices/iio:device1/buffer/enable
     chown system system /sys/devices/iio:device2/buffer/enable
@@ -416,7 +381,7 @@ on post-fs
     chmod 0660 /sys/devices/iio:device6/injection_mode
     #/sys/devices/iio:device* injection_mode 0660 system system
 
-    #accelerometer sensor
+    # accelerometer sensor
     chown system system /sys/devices/iio:device0/scan_elements/in_accel_x_en
     chmod 0660 /sys/devices/iio:device0/scan_elements/in_accel_x_en
     chown system system /sys/devices/iio:device0/scan_elements/in_accel_y_en
@@ -517,10 +482,10 @@ on post-fs
     chown system system /sys/devices/iio:device6/in_accel_injection_raw
     chmod 0660 /sys/devices/iio:device6/in_accel_injection_raw
 
-    #lenovo-sw caoyi1 add for gsensor autocalibration begin
+    # lenovo-sw caoyi1 add for gsensor autocalibration begin
     chown system system /persist/GSSET.txt
     chmod 0660 /persist/GSSET.txt
-    #lenovo-sw caoyi1 add for gsensor autocalibration end
+    # lenovo-sw caoyi1 add for gsensor autocalibration end
 
     #/sys/devices/iio:device* scan_elements/in_accel_x_en 0660 system system
     #/sys/devices/iio:device* scan_elements/in_accel_y_en 0660 system system
@@ -530,7 +495,7 @@ on post-fs
     #/sys/devices/iio:device* in_accel_z_scale 0660 system system
     #/sys/devices/iio:device* in_accel_injection_raw 0660 system system
 
-    #magnetometer sensor
+    # magnetometer sensor
     chown system system /sys/devices/iio:device0/scan_elements/in_magn_x_en
     chown system system /sys/devices/iio:device0/scan_elements/in_magn_y_en
     chown system system /sys/devices/iio:device0/scan_elements/in_magn_z_en
@@ -622,7 +587,7 @@ on post-fs
     #/sys/devices/iio:device* in_magn_y_scale 0660 system system
     #/sys/devices/iio:device* in_magn_z_scale 0660 system system
 
-    #gyroscope sensor
+    # gyroscope sensor
     chown system system /sys/devices/iio:device0/scan_elements/in_anglvel_x_en
     chown system system /sys/devices/iio:device0/scan_elements/in_anglvel_y_en
     chown system system /sys/devices/iio:device0/scan_elements/in_anglvel_z_en
@@ -715,7 +680,7 @@ on post-fs
     #/sys/devices/iio:device* in_anglvel_y_scale 0660 system system
     #/sys/devices/iio:device* in_anglvel_z_scale 0660 system system
 
-    #pressure sensor
+    # pressure sensor
     chown system system /sys/devices/iio:device0/scan_elements/in_pressure_en
     chown system system /sys/devices/iio:device0/scan_elements/in_temp_en
     chown system system /sys/devices/iio:device0/in_pressure_scale
@@ -762,7 +727,7 @@ on post-fs
     #/sys/devices/iio:device* scan_elements/in_temp_en 0660 system system
     #/sys/devices/iio:device* in_pressure_scale 0660 system system
 
-    #step counter sensor
+    # step counter sensor
     chown system system /sys/devices/iio:device0/max_delivery_rate
     chown system system /sys/devices/iio:device0/reset_counter
     chown system system /sys/devices/iio:device0/scan_elements/in_step_counter_en
@@ -809,7 +774,7 @@ on post-fs
     #/sys/devices/iio:device* reset_counter 0660 system system
     #/sys/devices/iio:device* scan_elements/in_step_counter_en 0660 system system
 
-    #significant motion sensor
+    # significant motion sensor
     chown system system /sys/devices/iio:device0/scan_elements/in_sign_motion_en
     chown system system /sys/devices/iio:device1/scan_elements/in_sign_motion_en
     chown system system /sys/devices/iio:device2/scan_elements/in_sign_motion_en
@@ -826,7 +791,7 @@ on post-fs
     chmod 0660 /sys/devices/iio:device6/scan_elements/in_sign_motion_en
     #/sys/devices/iio:device* scan_elements/in_sign_motion_en 0660 system system
 
-    #step detector sensor
+    # step detector sensor
     chown system system /sys/devices/iio:device0/scan_elements/in_step_detector_en
     chown system system /sys/devices/iio:device1/scan_elements/in_step_detector_en
     chown system system /sys/devices/iio:device2/scan_elements/in_step_detector_en
@@ -843,7 +808,7 @@ on post-fs
     chmod 0660 /sys/devices/iio:device6/scan_elements/in_step_detector_en
     #/sys/devices/iio:device* scan_elements/in_step_detector_en 0660 system system
 
-    #tilt sensor
+    # tilt sensor
     chown system system /sys/devices/iio:device0/scan_elements/in_tilt_en
     chown system system /sys/devices/iio:device1/scan_elements/in_tilt_en
     chown system system /sys/devices/iio:device2/scan_elements/in_tilt_en
@@ -858,19 +823,19 @@ on post-fs
     chmod 0660 /sys/devices/iio:device4/scan_elements/in_tilt_en
     chmod 0660 /sys/devices/iio:device5/scan_elements/in_tilt_en
     chmod 0660 /sys/devices/iio:device6/scan_elements/in_tilt_en
-#/sys/devices/iio:device* scan_elements/in_tilt_en 0660 system system
-#lenovo-sw caoyi1 add for A+G+M sensor,lsm6ds3tr and akm09916 end
+    #/sys/devices/iio:device* scan_elements/in_tilt_en 0660 system system
+    # lenovo-sw caoyi1 add for A+G+M sensor,lsm6ds3tr and akm09916 end
 
-#lenovo-sw caoyi1 add for Proximity and Light sensor,epl8802 begin
+    # lenovo-sw caoyi1 add for Proximity and Light sensor,epl8802 begin
     chown system system /sys/devices/platform/elan_alsps/ps_enable
     chmod 0660 /sys/devices/platform/elan_alsps/ps_enable
     chown system system /sys/devices/platform/elan_alsps/als_enable
     chmod 0660 /sys/devices/platform/elan_alsps/als_enable
     chown system system /sys/devices/platform/elan_alsps/set_delay_ms
     chmod 0660 /sys/devices/platform/elan_alsps/set_delay_ms
-#lenovo-sw caoyi1 add for Proximity and Light sensor,epl8802 end
+    # lenovo-sw caoyi1 add for Proximity and Light sensor,epl8802 end
 
-#lenovo.common.rc import begin
+    # lenovo.common.rc import begin
     mkdir /persist/camera 0755 mot_tcmd mot_tcmd
     mkdir /persist/camera/focus 0775 camera mot_tcmd
     mkdir /persist/camera/ledcal 0775 camera mot_tcmd
@@ -922,9 +887,8 @@ on post-fs
     chmod 0664  /sys/class/power_supply/battery/device/force_chg_fail_clear
     chown mot_tcmd root /sys/class/power_supply/ext-charger/usb_otg
     chmod 0664  /sys/class/power_supply/ext-charger/usb_otg
-#lenovo.common.rc import end
+    # lenovo.common.rc import end
 
-# msm specific files that need to be created on /data
 on post-fs-data
 
     mkdir /data/vendor/misc 01771 system system
@@ -932,15 +896,11 @@ on post-fs-data
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
 
-    #Create directories for Fingerprint
+    # Create directories for Fingerprint
     mkdir /data/misc/stargate 0770 system system
     mkdir /data/misc/stargate/bg_estimation 0770 system system
     mkdir /data/misc/stargate/calib_test 0770 system system
     mkdir /data/misc/stargate/database 0770 system system
-
-    # Begin, lenovo-sw liyuan8 20161223, for preload app
-    mkdir /data/app-lib2 0771 system system
-    # End, lenovo-sw liyuan8 20161223
 
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
@@ -968,15 +928,11 @@ on post-fs-data
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
-    #create port-bridge log dir
-    mkdir /data/vendor/port_bridge 0770 radio radio
-    chmod 0770 /data/vendor/port_bridge
-
     # Create netmgr log dir
     mkdir /data/vendor/netmgr 0770 radio radio
     chmod 0770 /data/vendor/netmgr
 
-    #create ipacm log dir
+    # Create ipacm log dir
     mkdir /data/vendor/ipa 0770 radio radio
     chmod 0770 /data/vendor/ipa
 
@@ -1020,7 +976,7 @@ on post-fs-data
     chown system system /sys/devices/platform/msm_sdcc.3/polling
     chown system system /sys/devices/platform/msm_sdcc.4/polling
 
-    #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
+    # Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
     mkdir /data/system 0775 system system
     #symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
 
@@ -1029,11 +985,11 @@ on post-fs-data
     mkdir /data/vendor/location/mq 0770 gps gps
     mkdir /data/vendor/location/xtwifi 0770 gps gps
 
-    #Create directory from IMS services
+    # Create directory from IMS services
     mkdir /data/shared 0755
     chown system system /data/shared
 
-    #Create directory for FOTA
+    # Create directory for FOTA
     mkdir /data/fota 0771
     chown system system /data/fota
 
@@ -1048,10 +1004,10 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
-    #Create a folder for SRS to be able to create a usercfg file
+    # Create a folder for SRS to be able to create a usercfg file
     mkdir /data/data/media 0770 media media
 
-    #Create FM dir for patchdownloader
+    # Create FM dir for patchdownloader
     mkdir /data/misc/fm 0770 system system
     chmod 0770 /data/misc/fm
 
@@ -1063,7 +1019,7 @@ on post-fs-data
     mkdir /data/misc/SelfHost/Running/ 2750 system shell
     mkdir /data/misc/SelfHost/socket/ 2770 system system
 
-    #Create PERFD deamon related dirs
+    # Create PERFD deamon related dirs
     mkdir /data/vendor/perfd 0770 root system
     chmod 2770 /data/vendor/perfd
     rm /data/vendor/perfd/default_values
@@ -1074,7 +1030,7 @@ on post-fs-data
     mkdir /data/nfc/param 0770 nfc nfc
     mkdir /data/vendor/nfc/param 0770 nfc nfc
 
-    #Create IOP  deamon related dirs
+    # Create IOP  deamon related dirs
     mkdir /data/vendor/iop 0770 root system
 
     # Mark the copy complete flag to not completed
@@ -1098,13 +1054,9 @@ on post-fs-data
     mkdir /data/vendor/qti-logkit/socket-public/ 2750 system diag
     mkdir /data/vendor/qti-logkit/logdata/ 2750 system shell
 
-    #Create SWAP related dirs
+    # Create SWAP related dirs
     mkdir /data/system/swap 0770 root system
     chmod 2770 /data/system/swap
-
-    # set aggressive read ahead for dm-0 and dm-1 during boot up
-    write /sys/block/dm-0/queue/read_ahead_kb 2048
-    write /sys/block/dm-1/queue/read_ahead_kb 2048
 
     #WAPI
     mkdir /data/misc/wapi_certificate 0770 system wifi
@@ -1116,13 +1068,10 @@ service iop /vendor/bin/iop
     disabled
     socket iop seqpacket 0666 root system
 
+# Reset read ahead for dm-0 and dm-1 to 512kb
 on property:sys.boot_completed=1
-    write /dev/kmsg "Boot completed "
-    #Reset read ahead for dm-0 and dm-1 to 512kb
+    write /dev/kmsg "Boot completed"
     write /sys/block/dm-0/queue/read_ahead_kb 512
-    write /sys/block/dm-1/queue/read_ahead_kb 512
-    #WDSP FW boot sysfs node used by STHAL
-    chown media audio /sys/kernel/wdsp0/boot
 
 # corefile limit
 on property:persist.debug.trace=1
@@ -1169,9 +1118,8 @@ service cnd /vendor/bin/cnd
     class main
     user system
     group system wifi inet radio wakelock net_admin
-    writepid /dev/cpuset/system-background/tasks
 
-service dpmQmiMgr /system/vendor/bin/dpmQmiMgr
+service dpmQmiMgr /vendor/bin/dpmQmiMgr
     class main
     user system
     group system
@@ -1186,7 +1134,6 @@ service imsqmidaemon /vendor/bin/imsqmidaemon
     user system
     socket ims_qmid stream 0660 system radio
     group radio log diag
-
 
 service imsdatadaemon /vendor/bin/imsdatadaemon
     class main
@@ -1290,7 +1237,7 @@ service btsnoop /vendor/bin/btsnoop
    disabled
    oneshot
 
-#start camera server as daemon
+# Start camera server as daemon
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
@@ -1319,11 +1266,6 @@ service time_daemon /vendor/bin/time_daemon
    user root
    group root
 
-service audiod /system/bin/audiod
-   class late_start
-   user system
-   group system
-
 service wcnss-service /vendor/bin/wcnss_service
     class main
     user system
@@ -1336,20 +1278,19 @@ service hbtp /vendor/bin/hbtp_daemon
     group system
     disabled
 
-#lenovo-sw weiweij added for smart_charger fast charger switch dameon
+# lenovo-sw weiweij added for smart_charger fast charger switch dameon
 service smart_charger /vendor/bin/smart_charger
-    class  main
+    class main
     user root
     seclabel u:r:smart_charger:s0
+# lenovo-sw weiweij added for smart_charger fast charger switch dameon end
 
-#lenovo-sw weiweij added for smart_charger fast charger switch dameon end
-
-#lenovo-sw wengjun,2016-2-26,add touch boot script begin
+# lenovo-sw wengjun,2016-2-26,add touch boot script begin
 service mmi-touch-sh /system/bin/init.mmi.touch.sh
     class core
     user root
     oneshot
-#lenovo-sw wengjun,2016-2-26,touch boot script end
+# lenovo-sw wengjun,2016-2-26,touch boot script end
 
 service ppd /vendor/bin/mm-pp-dpps
     class late_start
@@ -1415,11 +1356,6 @@ service ipacm-diag /vendor/bin/ipacm-diag
     group net_admin diag
     disabled
 
-service ipacm /vendor/bin/ipacm
-    class main
-    user radio
-    group inet
-
 service imsqmidaemon /vendor/bin/imsqmidaemon
     class main
     user net_Admin
@@ -1438,8 +1374,8 @@ service sensors /vendor/bin/sensors.qcom
     group root
     disabled
 
+# Netmgr not supported on specific target
 on property:ro.use_data_netmgrd=false
-    # netmgr not supported on specific target
     stop netmgrd
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
@@ -1457,10 +1393,6 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -I/vendor/etc/wifi/wpa_supplicant_overlay.conf \
     -O/data/misc/wifi/sockets -puse_p2p_group_interface=1 -dd \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
-#   we will start as root and wpa_supplicant will switch to user wifi
-#   after setting up the capabilities required for WEXT
-#   user wifi
-#   group wifi inet keystore
     class main
     socket wpa_wlan0 dgram 660 wifi wifi
     disabled
@@ -1480,17 +1412,10 @@ service cnss-daemon /vendor/bin/cnss-daemon -n -l
 on property:sys.shutdown.requested=*
     stop cnss-daemon
 
+# loc_launcher will start as root and set its uid to gps
 service loc_launcher /vendor/bin/loc_launcher
-    #loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet diag wifi
-
-on property:crypto.driver.load=1
-     insmod /system/lib/modules/qce.ko
-     insmod /system/lib/modules/qcedev.ko
-
-on property:persist.data.ds_fmc_app.mode=1
-    start ds_fmc_appd
 
 service ril-daemon2 /vendor/bin/hw/rild -c 2
     class main
@@ -1503,40 +1428,16 @@ service charger /charger
     group system graphics
     seclabel u:r:charger:s0
 
-service qlogd /system/xbin/qlogd
-    socket qlogd stream 0662 system system
-    class main
-    disabled
-on property:persist.sys.qlogd=1
-    start qlogd
-on property:persist.sys.qlogd=0
-    stop qlogd
-
-service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
+service msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     class core
     user root
     group root
     disabled
 
-# Coresight early boot service
-service cs-early-boot /system/bin/sh /persist/coresight/qdss.agent.sh early-boot /system/etc/init.qcom.debug.sh
-    class core
-    user root
-    oneshot
-
-# Coresight post boot servive
-service cs-post-boot /system/bin/sh /persist/coresight/qdss.agent.sh
-    user root
-    disabled
-    oneshot
-
-on property:sys.boot_completed=1
-    start cs-post-boot
-
-# disable thermal & BCL core_control to update interactive gov settings
+    # disable thermal & BCL core_control to update interactive gov settings
     write /sys/module/msm_thermal/core_control/enabled 0
 
-# governor settings
+    # governor settings
     write /sys/devices/system/cpu/cpu0/online 1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay "19000 1401600:39000"
@@ -1548,13 +1449,7 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 39000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
 
-on property:sys.dbg.coresight.enable=1
-    write /persist/coresight/enable 1
-
-on property:sys.dbg.coresight.enable=0
-    write /persist/coresight/enable 0
-
-# Enable sched guided freq control
+    # Enable sched guided freq control
     write /sys/devices/system/cpu/cpufreq/interactive/use_sched_load 1
     write /sys/devices/system/cpu/cpufreq/interactive/use_migration_notif 1
 
