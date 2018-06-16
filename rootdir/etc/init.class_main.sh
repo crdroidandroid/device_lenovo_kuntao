@@ -41,6 +41,7 @@ esac
 case "$baseband" in
     "msm" | "unknown")
     start ipacm-diag
+    start ipacm
 
     multisim=`getprop persist.radio.multisim.config`
 
@@ -51,10 +52,12 @@ case "$baseband" in
     case "$datamode" in
         "tethered")
             start qti
+            start port-bridge
             ;;
         "concurrent")
             start qti
             start netmgrd
+            start port-bridge
             ;;
         *)
             start netmgrd
